@@ -83,6 +83,12 @@ add_action( 'widgets_init', 'kaingang_widgets_init' );
  * Enqueue scripts and styles
  */
 function kaingang_scripts() {
+
+	// Normalize.css
+	wp_register_style( 'kaingang-normalize', get_template_directory_uri() . '/css/normalize.css', array(), '2.1.3' );
+	wp_enqueue_style( 'kaingang-normalize' );
+
+	// Main style
 	wp_enqueue_style( 'kaingang-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'kaingang-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
