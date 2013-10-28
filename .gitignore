@@ -1,2 +1,22 @@
+# .gitignore templates taken from https://github.com/github/gitignore #
+
+# OSX
+._*
+.AppleDouble
+.DS_Store
+.localized
+.LSOverride
+.Spotlight-V100
+.Trashes
+Icon
+
+# Sublime Text
+*.sublime-projectcompletions
 *.sublime-project
 *.sublime-workspace
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
