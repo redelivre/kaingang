@@ -1,8 +1,8 @@
 /*
 Theme Name: Kaingang
-Theme URI: http://underscores.me/
-Author: Eduardo Zulian, Thalita Sejanes
-Author URI: http://kaingang.redelivre.org.br
+Theme URI: http://kaingang.redelivre.org.br
+Author: Rede Livre
+Author URI: http://redelivre.org.br
 Description: Description
 Version: 1.0
 License: GNU General Public License
@@ -17,8 +17,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 Kaingang is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
 */
 
-/* =Global
------------------------------------------------ */
+/* ==========================================================================
+   Global
+   ========================================================================== */
 
 body,
 button,
@@ -26,14 +27,19 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	line-height: 1.5;
+}
+
+html {
+	background-color: #fbfbfb;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -45,38 +51,49 @@ hr {
 p {
 	margin-bottom: 1.5em;
 }
+
 ul, ol {
 	margin: 0 0 1.5em 3em;
 }
+
 ul {
 	list-style: disc;
 }
+
 ol {
 	list-style: decimal;
 }
+
 li > ul,
 li > ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
+
 dt {
 	font-weight: bold;
 }
+
 dd {
 	margin: 0 1.5em 1.5em;
 }
+
 b, strong {
 	font-weight: bold;
 }
+
 dfn, cite, em, i {
 	font-style: italic;
 }
+
 blockquote {
 	margin: 0 1.5em;
 }
+
 address {
 	margin: 0 0 1.5em;
 }
+
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
@@ -88,17 +105,21 @@ pre {
 	overflow: auto;
 	padding: 1.6em;
 }
+
 code, kbd, tt, var {
 	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
+
 abbr, acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
+
 mark, ins {
 	background: #fff9c0;
 	text-decoration: none;
 }
+
 sup,
 sub {
 	font-size: 75%;
@@ -107,32 +128,41 @@ sub {
 	position: relative;
 	vertical-align: baseline;
 }
+
 sup {
 	bottom: 1ex;
 }
+
 sub {
 	top: .5ex;
 }
+
 small {
 	font-size: 75%;
 }
+
 big {
 	font-size: 125%;
 }
+
 figure {
 	margin: 0;
 }
+
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
+
 th {
 	font-weight: bold;
 }
+
 img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 }
+
 button,
 input,
 select,
@@ -321,8 +351,9 @@ a:active {
 }
 
 
-/* =Menu
------------------------------------------------ */
+/* ==========================================================================
+   Menu
+   ========================================================================== */
 
 .main-navigation {
 	clear: both;
@@ -391,9 +422,21 @@ a:active {
 	}
 }
 
+/* ==========================================================================
+   Structure
+   ========================================================================== */
 
-/* =Content
------------------------------------------------ */
+.site {
+	margin: 0 auto;
+	max-width: 68.75em;
+	padding: 1em;
+
+	background-color: #fff;
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
 
 .sticky {
 }
@@ -424,17 +467,9 @@ a:active {
 }
 
 
-/* =Asides
------------------------------------------------ */
-
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-	display: none;
-}
-
-
-/* =Media
------------------------------------------------ */
+/* ==========================================================================
+   Media
+   ========================================================================== */
 
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
@@ -486,8 +521,9 @@ object {
 }
 
 
-/* =Navigation
------------------------------------------------ */
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
 
 .site-main [class*="navigation"] {
 	margin: 0 0 1.5em;
@@ -506,8 +542,9 @@ object {
 }
 
 
-/* =Comments
------------------------------------------------ */
+/* ==========================================================================
+   Comments
+   ========================================================================== */
 
 .comment-content a {
 	word-wrap: break-word;
@@ -517,8 +554,9 @@ object {
 }
 
 
-/* =Widgets
------------------------------------------------ */
+/* ==========================================================================
+   Widgets
+   ========================================================================== */
 
 .widget {
 	margin: 0 0 1.5em;
@@ -535,8 +573,9 @@ object {
 }
 
 
-/* =Infinite Scroll
------------------------------------------------ */
+/* ==========================================================================
+   Infinite Scroll
+   ========================================================================== */
 
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
@@ -547,4 +586,14 @@ object {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   These examples override the primary ('mobile first') styles.
+   ========================================================================== */
+
+@media only screen and (min-width: 60em) {
+    
 }
