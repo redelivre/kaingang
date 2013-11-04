@@ -18,4 +18,6 @@ Há, basicamente, três formas:
 Padrões, guias de estilo e demais documentações serão adicionadas ao [wiki do projeto](https://github.com/redelivre/kaingang/wiki).
 
 ## Agradecimentos e referências
-* [Underscores](http://underscores.me), pela base do tema
+* [Underscores](http://underscores.me)
+* [Normalize.css](http://necolas.github.io/normalize.css/)
+* [HTML5 Boilerplate](http://html5boilerplate.com/)
