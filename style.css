@@ -17,9 +17,32 @@ Use it to make something cool, have fun, and share what you've learned with othe
 Kaingang is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
 */
 
+
+/* ==========================================================================
+   Cores
+   ==========================================================================
+
+	Fundo padrão
+		Cinza #959595
+
+	Destaques de caixa
+		Cinza #ececec
+
+	Tipografia (destaques, links)
+		Vermelho
+
+   */
+
 /* ==========================================================================
    Global
    ========================================================================== */
+
+/* Apply a natural box layout model to all elements */
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 body,
 button,
@@ -32,7 +55,7 @@ textarea {
 }
 
 html {
-	background-color: #fbfbfb;
+	background-color: #959595;
 }
 
 /* Headings */
@@ -88,6 +111,9 @@ dfn, cite, em, i {
 
 blockquote {
 	margin: 0 1.5em;
+	font-size: 1.125em;
+	font-style: italic;
+	font-weight: 300;
 }
 
 address {
@@ -352,6 +378,32 @@ a:active {
 
 
 /* ==========================================================================
+   Structure
+   ========================================================================== */
+
+.wrap {
+	margin: 0 auto;
+	max-width: 68.75em;
+	width: 100%;
+}
+
+.site-header,
+.site-content {
+	margin-bottom: 2em;
+}
+
+.content-area {
+	padding: 1em;
+	background-color: #fff;
+}
+
+.site-footer {
+	padding: 2em;
+	background-color: #000;
+}
+
+
+/* ==========================================================================
    Menu
    ========================================================================== */
 
@@ -422,17 +474,6 @@ a:active {
 	}
 }
 
-/* ==========================================================================
-   Structure
-   ========================================================================== */
-
-.site {
-	margin: 0 auto;
-	max-width: 68.75em;
-	padding: 1em;
-
-	background-color: #fff;
-}
 
 /* ==========================================================================
    Content
@@ -560,6 +601,12 @@ object {
 
 .widget {
 	margin: 0 0 1.5em;
+	padding: 1em;
+	background-color: #fff;
+}
+
+.widget-title {
+
 }
 
 /* Make sure select elements fit in widgets */
@@ -595,5 +642,13 @@ object {
    ========================================================================== */
 
 @media only screen and (min-width: 60em) {
-    
+    .content-area {
+    	float: left;
+		width: 64%;
+	}
+
+	.widget-area {
+		float: right;
+		width: 34%;
+	}
 }
