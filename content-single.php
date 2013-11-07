@@ -11,6 +11,11 @@
 		<div class="entry-meta">
 			<?php kaingang_posted_on(); ?>
 		</div><!-- .entry-meta -->
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="entry-image">
+				<?php the_post_thumbnail( 'feature-singular' ); ?>
+			</div><!-- .entry-image -->
+		<?php endif ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

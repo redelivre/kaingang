@@ -9,7 +9,7 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )
-	$content_width = 640; /* pixels */
+	$content_width = 672; /* pixels */
 
 if ( ! function_exists( 'kaingang_setup' ) ) :
 /**
@@ -42,6 +42,13 @@ function kaingang_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	/**
+	 * New image sizes
+	 */
+	add_image_size( 'feature-main', 1600, 300, true );
+	add_image_size( 'feature-singular', 704, 350, true );
+	add_image_size( 'feature-archive', 370, 270, true );
+
+	/**
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus( array(
@@ -57,7 +64,7 @@ function kaingang_setup() {
 	 * Setup the WordPress core custom background feature.
 	 */
 	add_theme_support( 'custom-background', apply_filters( 'kaingang_custom_background_args', array(
-		'default-color' => 'ffffff',
+		'default-color' => '959595',
 		'default-image' => '',
 	) ) );
 }
