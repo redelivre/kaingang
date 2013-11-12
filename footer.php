@@ -12,6 +12,13 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrap">
+
+			<?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
+			<div id="tertiary" class="widget-area widget-area--footer clear" role="complementary">
+				<?php echo dynamic_sidebar( 'sidebar-footer' ); ?>
+			</div><!-- .widget-area -->
+			<?php endif; ?>
+
 			<div class="site-info">
 				<?php do_action( 'kaingang_credits' ); ?>
 				<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'kaingang' ), 'WordPress' ); ?></a>

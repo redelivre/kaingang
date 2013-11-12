@@ -283,6 +283,7 @@ textarea {
 /* Links */
 a {
 	color: #cc0033;
+	text-decoration: none;
 }
 
 a:visited {
@@ -415,7 +416,6 @@ body.single .site-main {
 }
 .main-navigation a {
 	display: block;
-	text-decoration: none;
 }
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -470,6 +470,14 @@ body.single .site-main {
    Content
    ========================================================================== */
 
+.home .hentry,
+.blog .hentry,
+.archive .hentry,
+.search .hentry {
+	background: #fff;
+	padding: 1em;
+}
+
 .sticky {
 }
 
@@ -496,6 +504,12 @@ body.single .site-main {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+/* Support for non-breaking text */
+.entry-title {
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 
@@ -649,8 +663,30 @@ object {
 		width: 64%;
 	}
 
-	.widget-area {
+	.widget-area--sidebar {
 		float: right;
 		width: 34%;
 	}
+
+	/*
+     * Footer Widget Area
+     */
+    .widget-area--footer .widget:first-child:nth-last-child(2),
+    .widget-area--footer .widget:first-child:nth-last-child(2) ~ .widget {
+        width: 50%;
+    }
+    
+    .widget-area--footer .widget:first-child:nth-last-child(3),
+    .widget-area--footer .widget:first-child:nth-last-child(3) ~ .widget {
+        width: 33.333%;
+    }
+    
+    .widget-area--footer .widget:first-child:nth-last-child(4),
+    .widget-area--footer .widget:first-child:nth-last-child(4) ~ .widget {
+        width: 25%;
+    }
+    
+    .widget-area--footer .widget {
+            float: left;
+    }
 }

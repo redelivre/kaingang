@@ -77,7 +77,18 @@ add_action( 'after_setup_theme', 'kaingang_setup' );
 function kaingang_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'kaingang' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'sidebar-main',
+		'description'	=> __( 'The main sidebar', 'kaingang' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Footer Widget Area', 'kaingang' ),
+		'id'            => 'sidebar-footer',
+		'description'	=> __( 'Appears on your footer', 'kaingang' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
