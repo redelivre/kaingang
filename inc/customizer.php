@@ -101,8 +101,18 @@ function kaingang_customize_register( $wp_customize ) {
         'section'	=> 'kaingang_branding',
         'settings' 	=> 'kaingang_logo',
         'context'	=> 'kaingang-custom-logo'
-    ) ) ); 
+    ) ) );
 
+    // Color section: link color
+    $wp_customize->add_setting( 'kaingang_link_color', array(
+        'default'     => '#cc0033',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'kaingang_link_color', array(
+        'label'      => __( 'Link Color', 'kaingang' ),
+        'section'    => 'colors',
+        'settings'   => 'kaingang_link_color'
+    ) ) );
 
 }
 add_action( 'customize_register', 'kaingang_customize_register' );
@@ -134,6 +144,15 @@ function kaingang_customize_css() {
 			position: absolute !important;
 		}
 		<?php endif; ?>
+
+        <?php
+        $link_color = get_theme_mod( 'kaingang_link_color' );
+		if ( ! empty( $link_color ) && $link_color != '#cc0033' ) : ?>
+	        a,
+	        a:visited {
+	        	color: <?php echo $link_color; ?>;
+	        }
+        <?php endif; ?>
 	</style> 
 	<!-- /Customizer options -->
 	<?php
