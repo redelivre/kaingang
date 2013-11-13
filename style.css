@@ -52,6 +52,7 @@ select,
 textarea {
 	color: #404040;
 	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
 	line-height: 1.5;
 }
 
@@ -78,6 +79,7 @@ p {
 
 ul, ol {
 	margin: 0 0 1.5em 1.5em;
+	padding: 0;
 }
 
 ul {
@@ -391,8 +393,12 @@ a:active {
 	background-color: #fff;
 }
 
-body.single .site-main {
-	padding: 1em;
+.single .site-main,
+.home .hentry,
+.blog .hentry,
+.archive .hentry,
+.search .hentry {
+	padding: 1.5em;
 	background: #fff;
 }
 
@@ -470,14 +476,6 @@ body.single .site-main {
    Content
    ========================================================================== */
 
-.home .hentry,
-.blog .hentry,
-.archive .hentry,
-.search .hentry {
-	background: #fff;
-	padding: 1em;
-}
-
 .sticky {
 }
 
@@ -488,11 +486,6 @@ body.single .site-main {
 .byline,
 .updated {
 	display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-	display: inline;
 }
 
 .page-content,
@@ -506,12 +499,25 @@ body.single .site-main {
 	margin: 0 0 1.5em;
 }
 
-/* Support for non-breaking text */
-.entry-title {
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
+.entry-header {
+	margin-bottom: 2em;
 }
 
+.entry-title {
+	margin: 0;
+	-ms-word-wrap: break-word; /* Support for non-breaking text */
+	word-wrap: break-word; /* Support for non-breaking text */
+}
+
+.entry-category {
+	font-size: 0.875em;
+	text-transform: uppercase;
+}
+
+.entry-category a {
+	margin-right: 0.5em;
+	color: #404040;
+}
 
 /* ==========================================================================
    Media
@@ -606,12 +612,13 @@ object {
 
 .widget {
 	margin: 0 0 1.5em;
-	padding: 1em;
+	padding: 1.5em;
 	background-color: #fff;
 }
 
 .widget-title {
-
+	font-weight: 300;
+	text-transform: uppercase;
 }
 
 /* Make sure select elements fit in widgets */
