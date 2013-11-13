@@ -1,9 +1,9 @@
 # Kaingang
 O tema de festivais para a Rede Livre, que conta com algumas funcionalidades:
 
-* Possibilidade de upload de logo
+* Possibilidade de adicionar logo personalizada
 * Escolha da cor dos links e outros pequenos destaques
-* Inversão da cor predominante, sendo possível mudar para preto ou branco
+* Inversão da cor predominante, sendo possível mudar entre *claro* e *escuro*
 * Escolha de cor ou imagem para o fundo do site
 
 
