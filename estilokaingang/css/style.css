@@ -166,6 +166,13 @@ figcaption{
 	font-size: 0.875em;
 }
 
+.archive-title, 
+.author-name, 
+.vcard{
+	font-weight: 300;
+	font-size: 2.000em;
+}
+
 
 /* -------------------------------------------------------------------------
  agenda
