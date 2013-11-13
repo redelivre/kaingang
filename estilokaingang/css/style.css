@@ -1,0 +1,178 @@
+ @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,700|Titillium+Web:300);
+ 
+ body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+}
+
+.title{
+	color: gray;
+}
+
+/* -------------------------------------------------------------------------
+ Colors
+---------------------------------------------------------------------------- */
+.sg-color--a .sg-color-swatch {background: #959595;}
+
+.sg-color--b .sg-color-swatch {background: #ececec;}
+
+.sg-color--c .sg-color-swatch {background: #cc0033;}
+
+.sg-color--d .sg-color-swatch {background: #fff;}
+
+.sg-color--e .sg-color-swatch {background: #000000;}
+
+/* -------------------------------------------------------------------------
+ Fonts
+---------------------------------------------------------------------------- */
+.sg-font-primary {font-family:'Titillium Web', sans-serif;}
+
+.sg-font-secondary {font-family:'Source Sans Pro', sans-serif;}
+
+/* -------------------------------------------------------------------------
+ Button
+---------------------------------------------------------------------------- */
+
+button{
+	background: #ececec;
+	border: 0;
+	color:#cc0033;
+	padding: 3px 20px 3px 10px;
+	cursor:pointer;
+	transition: all 0.2s linear 0s;
+}
+
+button:hover{
+	background: #959595;
+}
+
+/* -------------------------------------------------------------------------
+ Input
+---------------------------------------------------------------------------- */
+
+input{
+	background:#ececec;
+	border-radius: 5px;
+	border: none;
+	padding: 5px;
+	color: #000000;
+}
+
+/* -------------------------------------------------------------------------
+ Headings
+---------------------------------------------------------------------------- */
+
+h1{
+	font-weight: 700;
+	font-size: 2.000em;
+}
+
+h2{
+	font-family:'Source Sans Pro', sans-serif;
+	font-weight: 700;
+	font-size: 1.375em;
+}
+
+h3{
+	font-weight: 300;
+	font-size: 1.250em;
+}
+
+h4{
+	font-family:'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 1.000em;
+}
+
+/* -------------------------------------------------------------------------
+ links
+---------------------------------------------------------------------------- */
+
+a{
+	color: #cc0033;
+	border: none;
+	text-decoration:none;
+}
+
+a:hover{
+	color: #959595;
+}
+
+/* -------------------------------------------------------------------------
+ text-elements
+---------------------------------------------------------------------------- */
+
+p{
+	font-family:'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	font-size: 1.000em;
+}
+
+hr{
+	border: none;
+	background: #ececec;
+}
+
+blockquote {
+	font-family:'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-style: italic;
+}
+
+blockquote p{
+	font-family:'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-style: italic;
+}
+
+figcaption{
+	font-family:'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 0.875em;
+}
+
+/* -------------------------------------------------------------------------
+ wp-classes
+---------------------------------------------------------------------------- */
+
+
+.widget-title,
+.reply-title{
+	font-weight: 300;
+	font-size: 1.250em;
+}
+
+.entry-meta{
+	font-weight: 700;
+}
+
+.site-navigation,
+.post-navigation{
+	font-size: 1.250em;
+	font-style: italic;
+}
+
+/* -------------------------------------------------------------------------
+ post
+---------------------------------------------------------------------------- */
+
+.entry-title{
+	font-weight: 700;
+	font-size: 2.000em;
+}
+
+.wp-caption-text{
+	font-weight: 300;
+	font-size: 0.875em;
+}
+
+
+/* -------------------------------------------------------------------------
+ agenda
+---------------------------------------------------------------------------- */
+
+.adress,
+.date{
+	font-size: 1.250em;	
+}
+
