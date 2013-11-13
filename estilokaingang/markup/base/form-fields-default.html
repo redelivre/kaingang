@@ -1,0 +1,13 @@
+<form>
+  <fieldset>
+    <div><label>Text input with placeholder</label> <input type="text" placeholder="I'm placeholder text"></div>
+    <script>
+      if (document.querySelector) {
+        document.querySelector('#range').onchange = function(e) {
+          e.target.nextElementSibling.innerText = e.target.value;
+        }
+      }
+    </script>
+    </div>
+  </fieldset>  
+</form>

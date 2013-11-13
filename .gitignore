@@ -20,3 +20,8 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+
+.buildpath
+.settings
+.htaccess
+.project
