@@ -67,7 +67,6 @@ function kaingang_customize_register( $wp_customize ) {
 		
 	}
 
-
 	// Add postMessage support for site title and description for the Theme Customizer.
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
@@ -91,7 +90,7 @@ function kaingang_customize_register( $wp_customize ) {
 		'priority' => 30,
 	) );
 	
-	// Branding: Logo settings
+	// Branding section: logo uploader
 	$wp_customize->add_setting( 'kaingang_logo', array(
 		'capability'  => 'edit_theme_options',
 	) );
@@ -114,6 +113,20 @@ function kaingang_customize_register( $wp_customize ) {
         'settings'   => 'kaingang_link_color'
     ) ) );
 
+    // Color section: color scheme
+	$wp_customize->add_setting( 'kaingang_color_scheme', array(
+	    'default'    => 'light'
+	) );
+
+	$wp_customize->add_control( 'kaingang_color_scheme', array(
+	    'label'    => __( 'Color Scheme', 'kaingang' ),
+	    'section'  => 'colors',
+	    'type'     => 'radio',
+	    'choices'  => array( 'light' => __( 'Light', 'kaingang' ), 'dark' => __( 'Dark', 'kaingang' ) ),
+	    'priority' => 5,
+	    'settings' => 'kaingang_color_scheme'
+	) );
+
 }
 add_action( 'customize_register', 'kaingang_customize_register' );
 
@@ -124,6 +137,7 @@ function kaingang_customize_preview_js() {
 	wp_enqueue_script( 'kaingang_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'kaingang_customize_preview_js' );
+
 
 /**
  * This will output the custom WordPress settings to the live theme's WP head.
@@ -136,6 +150,15 @@ function kaingang_customize_css() {
 	?>
 	<!-- Customizer options -->
 	<style type="text/css">
+		<?php
+		$color_scheme = get_theme_mod( 'kaingang_color_scheme' );
+		if ( isset( $color_scheme ) && ! empty( $color_scheme ) ) : ?>
+		.site-header,
+		.site-footer {
+			background-color: <?php echo ( $color_scheme == 'light' ) ? '#fff' : '#000'; ?>;
+		}
+		<?php endif; ?>
+
 		<?php if ( get_theme_mod( 'kaingang_display_header_text' ) == '' ) : ?>
 		/* Header text */
 		.site-title,
