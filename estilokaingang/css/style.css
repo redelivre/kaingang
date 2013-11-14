@@ -183,3 +183,85 @@ figcaption{
 	font-size: 1.250em;	
 }
 
+/* -------------------------------------------------------------------------
+ redes-sociais
+---------------------------------------------------------------------------- */
+.social-bookmarks{
+	font-weight: 300;
+}
+#social-bookmarks{
+	
+}
+
+#social-bookmarks img{	
+	width:35px;
+	height: 35px;
+	padding: 10px;
+}
+
+
+#facebook{
+	float: left;
+	width:55px;
+	height: 55px;
+	border: thick  solid  #959595;
+	border-radius:55px;
+	background: #fff;
+}
+
+#facebook:hover{
+	background: #084baf;
+}
+
+#twitter{
+	float: left;
+	width:55px;
+	height: 55px;
+	border: thick  solid  #959595;
+	border-radius:55px;
+	background: #fff;
+}
+
+#twitter:hover{
+	background: #019ad2;
+}
+
+#google-plus{
+	float: left;
+	width:55px;
+	height: 55px;
+	border: thick  solid  #959595;
+	border-radius:55px;
+	background: #fff;
+}
+
+#google-plus:hover{
+	background: #eb1533;
+}
+
+#youtube{
+	float: left;
+	width:55px;
+	height: 55px;
+	border: thick  solid  #959595;
+	border-radius:55px;
+	background: #fff;
+}
+
+#youtube:hover{
+	background: #a9091f;
+}
+
+#rss{
+	float: left;
+	width:55px;
+	height: 55px;
+	border: thick  solid  #959595;
+	border-radius:55px;
+	background: #fff;
+}
+
+#rss:hover{
+	background: #ff9900;
+}
+

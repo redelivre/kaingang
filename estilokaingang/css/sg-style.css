@@ -258,6 +258,7 @@ body {margin: 0;}
 .sg-markup-controls {
   overflow: hidden;
   padding-top: 1.5em;
+  clear: both;
 }
 
 .sg-source {
