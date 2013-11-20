@@ -30,6 +30,20 @@
 .sg-font-secondary {font-family:'Source Sans Pro', sans-serif;}
 
 /* -------------------------------------------------------------------------
+ Icon fonts
+---------------------------------------------------------------------------- */
+@font-face {
+	  font-family: 'kaingang';
+	  src: url('../fonts/kaingang.eot?615903');
+	  src: url('../fonts/kaingang.eot?615903#iefix') format('embedded-opentype'),
+	       url('../fonts/kaingang.woff?615903') format('woff'),
+	       url('../fonts/kaingang.ttf?615903') format('truetype'),
+	       url('../fonts/kaingang.svg?615903#kaingang') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+}
+
+/* -------------------------------------------------------------------------
  Button
 ---------------------------------------------------------------------------- */
 
@@ -178,6 +192,38 @@ figcaption{
 /* -------------------------------------------------------------------------
  redes-sociais
 ---------------------------------------------------------------------------- */
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "kaingang";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
 .social-bookmarks{
 	font-weight: 300;
 }
@@ -185,74 +231,89 @@ figcaption{
 	
 }
 
-#social-bookmarks img{	
-	width:35px;
-	height: 35px;
-	padding: 10px;
-}
-
-
 #facebook{
 	float: left;
-	width:55px;
-	height: 55px;
 	border: thick  solid  #959595;
 	border-radius:55px;
 	background: #fff;
+	padding: 10px;
 }
 
 #facebook:hover{
-	background: #084baf;
+	background: #3b5999;
+	color:#fff;
+}
+
+.icon-facebook:before{
+	content: '\e800';
 }
 
 #twitter{
 	float: left;
-	width:55px;
-	height: 55px;
 	border: thick  solid  #959595;
 	border-radius:55px;
 	background: #fff;
+	padding: 10px;
 }
 
 #twitter:hover{
 	background: #019ad2;
+	color:#fff;
+}
+
+.icon-twitter:before {
+	content: '\e805'; 
 }
 
 #google-plus{
 	float: left;
-	width:55px;
-	height: 55px;
 	border: thick  solid  #959595;
 	border-radius:55px;
 	background: #fff;
+	padding: 10px;
 }
 
 #google-plus:hover{
-	background: #eb1533;
+	background: #cf3e2d;
+	color: #fff;
+}
+
+.icon-gplus:before { 
+	content: '\e801'; 
 }
 
 #youtube{
 	float: left;
-	width:55px;
-	height: 55px;
 	border: thick  solid  #959595;
 	border-radius:55px;
 	background: #fff;
+	padding: 10px;
 }
 
 #youtube:hover{
-	background: #a9091f;
+	background: #d02525;
+	color: #fff;
+}
+
+.icon-youtube:before{
+	content: '\e804';
 }
 
 #rss{
 	float: left;
-	width:55px;
-	height: 55px;
 	border: thick  solid  #959595;
 	border-radius:55px;
 	background: #fff;
+	padding: 10px;
 }
 
-#rss:hover{
-	background: #ff9900;
+.icon-rss:before,
+#rss:before {
+	content: '\e803';
+}
+
+.icon-rss:hover,
+#rss:hover {
+	background: #ff6600;
+	color: #fff;
 }
