@@ -558,14 +558,23 @@ a:active {
 	word-wrap: break-word; /* Support for non-breaking text */
 }
 
-.entry-category {
+/* 
+   4.2 - Entry meta
+   ========================================================================== */
+
+.entry-meta {
 	font-size: 0.875em;
-	text-transform: uppercase;
 }
 
-.entry-category a {
-	margin-right: 0.5em;
-	color: #404040;
+.entry-meta--footer {
+	text-align: right;
+}
+
+.meta-title {
+	margin-right: 0.25em;
+	font-size: 1.143em;
+	font-weight: 300;
+	text-transform: uppercase;
 }
 
 /**
