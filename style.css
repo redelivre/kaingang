@@ -450,9 +450,10 @@ a:active {
    3.0 - Header
    ========================================================================== */
 
-/**
- * 3.2 - Main navigation
- */
+/*
+   3.2 - Main navigation
+   ========================================================================== */
+
 .main-navigation {
 	display: block;
 }
@@ -545,9 +546,10 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
-/**
- * 4.1 - Entry header
- */
+/*
+   4.1 - Entry header
+   ========================================================================== */
+
 .entry-header {
 	margin-bottom: 2em;
 }
@@ -558,7 +560,7 @@ a:active {
 	word-wrap: break-word; /* Support for non-breaking text */
 }
 
-/* 
+/*
    4.2 - Entry meta
    ========================================================================== */
 
@@ -577,9 +579,9 @@ a:active {
 	text-transform: uppercase;
 }
 
-/**
- * 4.4 - Media
- */
+/*
+   4.4 - Media
+   ========================================================================== */
 
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
@@ -630,10 +632,9 @@ object {
 	max-width: 100%;
 }
 
-
-/**
- * 4.7 - Post / page navigation
- */
+/*
+   4.7 - Post / page navigation
+   ========================================================================== */
 
 .site-main [class*="navigation"] {
 	margin: 0 0 1.5em;
@@ -651,9 +652,10 @@ object {
 	width: 50%;
 }
 
-/**
- * 4.12 - Comments
- */
+/*
+   4.12 - Comments
+   ========================================================================== */
+
 .comment-content a {
 	word-wrap: break-word;
 }
