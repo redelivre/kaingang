@@ -104,7 +104,7 @@ hr {
 
 /* Text elements */
 p {
-	margin-bottom: 1.5em;
+	margin: 0 0 1.5em;
 }
 
 ul, ol {
@@ -546,6 +546,16 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
+/* General class to work as our 'media object': http://bit.ly/cCY3Ew */
+.entry-body {
+	overflow: hidden;
+}
+
+/* No bottom margin for our 'media object' */
+.entry-body p {
+	margin-bottom: 0;
+}
+
 /*
    4.1 - Entry header
    ========================================================================== */
@@ -582,6 +592,19 @@ a:active {
 /*
    4.4 - Media
    ========================================================================== */
+
+.entry-image {
+	margin: -1.5em 1.5em -1.5em -1.5em;
+	float: left;
+}
+
+.attachment-feature-archive {
+	vertical-align: middle;
+}
+
+.single .entry-image {
+	margin: 0 -1.5em;
+}
 
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
