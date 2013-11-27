@@ -45,7 +45,7 @@ function kaingang_enhanced_image_navigation( $url, $id ) {
 add_filter( 'attachment_link', 'kaingang_enhanced_image_navigation', 10, 2 );
 
 /**
- * Filters wp_title to print a neat <title> tag based on what is being viewed.
+ * Filter wp_title to print a neat <title> tag based on what is being viewed.
  */
 function kaingang_wp_title( $title, $sep ) {
 	global $page, $paged;
@@ -68,3 +68,14 @@ function kaingang_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'kaingang_wp_title', 10, 2 );
+
+/**
+ * Change excerpt length in archives
+ * 
+ * @param  integer $length The default length
+ * @return integer New excerpt length
+ */
+function kaingaing_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'kaingaing_excerpt_length' );
