@@ -11,6 +11,12 @@
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 	</header><!-- .entry-header -->
 
+	<?php if ( has_post_thumbnail() ) : ?>
+		<div class="entry-image">
+			<?php the_post_thumbnail( 'feature-singular' ); ?>
+		</div><!-- .entry-image -->
+	<?php endif ?>
+
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
