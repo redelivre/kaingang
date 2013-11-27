@@ -436,7 +436,7 @@ a:active {
 	background-color: #fff;
 }
 
-.single .site-main,
+.singular .site-main,
 .home .hentry,
 .blog .hentry,
 .archive .hentry,
@@ -598,12 +598,12 @@ a:active {
 	float: left;
 }
 
-.attachment-feature-archive {
+.entry-image img {
 	vertical-align: middle;
 }
 
-.single .entry-image {
-	margin: 0 -1.5em;
+.singular .entry-image {
+	margin: 0 -1.5em 1.5em;
 }
 
 .page-content img.wp-smiley,
@@ -698,6 +698,7 @@ object {
 }
 
 .widget-title {
+	margin-top: 0;
 	font-weight: 300;
 	text-transform: uppercase;
 }

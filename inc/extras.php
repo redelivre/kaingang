@@ -21,9 +21,11 @@ add_filter( 'wp_page_menu_args', 'kaingang_page_menu_args' );
  */
 function kaingang_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author
-	if ( is_multi_author() ) {
+	if ( is_multi_author() )
 		$classes[] = 'group-blog';
-	}
+
+	if ( is_singular() )
+		$classes[] = 'singular';
 
 	return $classes;
 }
