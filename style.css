@@ -59,7 +59,8 @@ Kaingang is based on Underscores http://underscores.me/, (C) 2012-2013 Automatti
 		4.13 - Multisite
 	5.0 - Widget area
 	6.0 - Footer
-	7.0 - Media queries 
+	7.0 - Events / Agenda
+	8.0 - Media queries 
  */
 
 /* ==========================================================================
@@ -436,11 +437,9 @@ a:active {
 	background-color: #fff;
 }
 
-.singular .site-main,
-.home .hentry,
-.blog .hentry,
-.archive .hentry,
-.search .hentry {
+/* Defines a white box for most of the elements */
+.box,
+.singular .site-main {
 	padding: 1.5em;
 	background: #fff;
 }
@@ -718,7 +717,15 @@ object {
    ========================================================================== */
 
 /* ==========================================================================
-   7.0 - Media queries
+   7.0 - Events / agenda
+   ========================================================================== */
+
+.events-list {
+	margin-bottom: 1.5em;
+}
+
+/* ==========================================================================
+   8.0 - Media queries
    ========================================================================== */
 
 @media only screen and (min-width: 60em) {
@@ -762,4 +769,11 @@ object {
     .widget-area--footer .widget {
             float: left;
     }
+
+    /* Events */
+    .event {
+    	float: left;
+    	padding: 0 0.75em;
+		width: 25%;	
+	}
 }
