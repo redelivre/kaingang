@@ -191,6 +191,63 @@ function kaingang_posted_on() {
 }
 endif;
 
+if ( ! function_exists( 'kaingang_the_event' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function kaingang_the_event() {
+	global $post;
+	?>
+	<div class="col-4">
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<div class="event">
+		    	<?php if ( has_post_thumbnail() ) : ?>
+					<div class="entry-image entry-image--event">
+						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'feature-event' ); ?></a>
+					</div><!-- .entry-image--event -->
+				<?php endif ?>
+				<h3 class="entry-title entry-title--event"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<div class="entry-content">
+			        <ul class="entry-event">
+						<?php if ( $date_start = get_post_meta( $post->ID, '_data_inicial', true ) ) : ?>
+						<li class="event-date">
+							<?php
+							// The date format
+							$date_format = 'd/m/y';
+
+							// End date
+							$date_end = get_post_meta( $post->ID, '_data_final', true );
+							
+							if ( $date_end && $date_end != $date_start ) :
+								/* translators: Initial & final date for the event */
+								printf(
+									'%1$s to %2$s',
+									date( $date_format, strtotime( $date_start ) ),
+									date( $date_format, strtotime( $date_end ) )
+								);
+							else :
+								echo date( $date_format, strtotime( $date_start ) );
+							endif;
+							?>
+						</li>
+						<?php endif; ?>
+						
+						<?php if ( $time = get_post_meta( $post->ID, '_horario', true ) ) : ?>
+						<li class="event-time"><?php echo $time; ?></li>
+						<?php endif; ?>
+						
+						<?php if ( $location = get_post_meta( $post->ID, '_onde', true ) ) : ?>
+						<li class="event-location"><?php echo $location; ?></li>
+						<?php endif; ?>
+					</ul>
+				</div><!-- .entry-content -->
+			</div><!-- .event -->
+		</article><!-- #post-## -->
+	</div>
+    <?php
+}
+endif;
+
 /**
  * Returns true if a blog has more than 1 category
  */

@@ -555,6 +555,16 @@ a:active {
 	margin-bottom: 0;
 }
 
+/* General archive titles */
+.page-title {
+	margin-top: 0;
+	padding: 1em;
+	background: #fff;
+	font-size: 1.5em;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
 /*
    4.1 - Entry header
    ========================================================================== */
@@ -724,9 +734,28 @@ object {
 	margin-bottom: 1.5em;
 }
 
+.home .events-list {
+	padding: 1em 1.5em;
+	background: #fff;
+}
+
+.events-list .type-agenda {
+	padding: 0 0.75em;
+	vertical-align: top;
+	background: #fff;
+}
+
+.entry-image--event {
+	margin: 0 -0.75em 0.75em -0.75em;
+}
+
 .entry-event {
 	margin-left: 0;
 	list-style-type: none;
+}
+
+.entry-title--event {
+	text-transform: uppercase;
 }
 
 /* ==========================================================================
@@ -734,6 +763,26 @@ object {
    ========================================================================== */
 
 @media only screen and (min-width: 60em) {
+
+	/* Basic column structure */
+
+	.col-4 { /* Four columns 1/4 */
+		float: left;
+		padding: 0.5em;
+		width: 25%;
+	}
+
+	.col-4:first-child {
+		padding-left: 0;
+	}
+
+	.col-4:nth-child(4) {
+		padding-right: 0;
+	}
+
+	.col-4:nth-child(4n+1) {
+		clear: both;
+	}
 
 	.site-branding {
 		float: left;
@@ -748,6 +797,10 @@ object {
     .content-area {
     	float: left;
 		width: 64%;
+	}
+
+	.content-area--full {
+		width: 100%;
 	}
 
 	.widget-area--sidebar {
@@ -772,13 +825,16 @@ object {
     }
     
     .widget-area--footer .widget {
-            float: left;
+        float: left;
     }
 
     /* Events */
-    .event {
-    	float: left;
-    	padding: 0 0.75em;
-		width: 25%;	
+	.events-list .type-agenda:nth-child(4n) {
+		margin-right: 0;
 	}
+
+	.events-list .type-agenda:nth-child(4n+1) {
+		clear: both;
+	}
+
 }

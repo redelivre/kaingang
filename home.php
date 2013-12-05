@@ -28,32 +28,7 @@ get_header(); ?>
         $events = new WP_Query( $args );
         
         if ( $events->have_posts() ) : while ( $events->have_posts() ) : $events->the_post();
-
-            $data_inicial = get_post_meta($post->ID, '_data_inicial', true);
-
-            if ($data_inicial)
-                $data_inicial = mysql2date(get_option('date_format'), $data_inicial, true);
-
-            $data_final = get_post_meta($post->ID, '_data_final', true);
-            if ($data_final)
-                $data_final = mysql2date(get_option('date_format'), $data_final, true);
-            ?>
-            <div class="event">
-            	<?php if ( has_post_thumbnail() ) : ?>
-					<div class="entry-image--event">
-						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'feature-event' ); ?></a>
-					</div><!-- .entry-image--event -->
-				<?php endif ?>
-                <div class="event-date">
-                    <?php echo $data_inicial; ?> 
-                    <?php if ($data_inicial != $data_final): ?>
-                        a <?php echo $data_final; ?>
-                    <?php endif; ?>
-                </div>
-                <a href="<?php echo get_permalink( $post->ID ); ?>" title="<?php echo esc_attr( $post->post_title ); ?>"><?php echo $post->post_title; ?></a>
-            </div><!-- .event -->
-            
-            <?php
+        	kaingang_the_event();
         endwhile; endif;
 
         wp_reset_postdata();
