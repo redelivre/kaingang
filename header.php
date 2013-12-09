@@ -45,4 +45,28 @@
 		</div><!-- .wrap -->
 	</header><!-- .site-header -->
 
+	<div class="feature flexslider js-flexslider">
+		<?php
+        $featured_posts = new WP_Query( array( 'posts_per_page' => 4 ) );
+        
+        if ( $featured_posts->have_posts() ) : ?>
+	        <div class="flexslider-slides">
+		        <?php while ( $featured_posts->have_posts() ) : $featured_posts->the_post(); ?>
+		        	<div class="flexslider-slide-wrapper">
+			        	<img class="flexslider-image" src="http://lorempixel.com/1280/300/sports" />
+			        	<div class="wrap">
+				        	<article <?php post_class(); ?>>
+				        		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+				        	</article>
+			        	</div>
+		        	</div>
+		        <?php
+		        endwhile;
+		        wp_reset_postdata();
+		        ?>
+		    </div><!-- .flexslider-slides -->
+		<?php endif; ?>
+	</div>
+
+
 	<div id="content" class="site-content wrap">

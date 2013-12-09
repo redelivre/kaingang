@@ -113,6 +113,11 @@ function kaingang_scripts() {
 	wp_register_style( 'kaingang-fonts', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic' );
 	wp_enqueue_style ( 'kaingang-fonts' );
 
+	// FlexSlider
+	wp_register_style( 'kaingang-flexslider', get_template_directory_uri() . '/css/flexslider.css', array() );
+	wp_enqueue_style( 'kaingang-flexslider' );
+	wp_enqueue_script( 'kaingang-flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array(), '2.2.0', true );
+
 	wp_enqueue_script( 'kaingang-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'kaingang-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -151,3 +156,18 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+function kaingang_footer_scripts() {
+	?> 
+	<!-- FlexSlider -->
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+		    jQuery('.js-flexslider').flexslider({
+				animation: "slide",
+				selector: ".flexslider-slides > .flexslider-slide-wrapper"
+			});
+		});
+	</script>
+	<?php
+}
+add_action( 'wp_footer', 'kaingang_footer_scripts' );
