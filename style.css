@@ -461,6 +461,10 @@ a:active {
    3.2 - Main navigation
    ========================================================================== */
 
+.menu-item {
+	padding: 0.5em;
+}
+
 .main-navigation {
 	display: block;
 }
@@ -470,26 +474,32 @@ a:active {
 	margin: 0;
 	padding-left: 0;
 }
+
 .main-navigation li {
 	float: left;
 	position: relative;
 }
+
 .main-navigation a {
 	display: block;
 }
+
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
 	float: left;
 	left: 0;
 	position: absolute;
-	top: 1.5em;
+	top: 2em;
 	z-index: 99999;
+	background: #fff;
+	box-shadow: 1px 1px 1px #ccc;
 }
+
 .main-navigation ul ul ul {
 	left: 100%;
 	top: 0;
 }
+
 .main-navigation ul ul a {
 	width: 200px;
 }
