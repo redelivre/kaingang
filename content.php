@@ -4,7 +4,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'clear box' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'clear box media' ); ?>>
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="entry-image">
 			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'feature-archive' ); ?></a>
