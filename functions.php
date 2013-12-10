@@ -76,9 +76,19 @@ add_action( 'after_setup_theme', 'kaingang_setup' );
  */
 function kaingang_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'kaingang' ),
+		'name'          => __( 'Home Sidebar', 'kaingang' ),
 		'id'            => 'sidebar-main',
-		'description'	=> __( 'The main sidebar', 'kaingang' ),
+		'description'	=> __( 'The main sidebar, displayed on the front page', 'kaingang' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s box">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Internal Sidebar', 'kaingang' ),
+		'id'            => 'sidebar-internal',
+		'description'	=> __( 'The secondary sidebar, displayed internally', 'kaingang' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s box">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -164,7 +174,7 @@ function kaingang_footer_scripts() {
 		jQuery(document).ready(function() {
 		    jQuery('.js-flexslider').flexslider({
 				animation: "slide",
-				selector: ".flexslider-slides > .flexslider-slide-wrapper"
+				selector: ".flexslider-slides > .flexslider-slide-wrapper",
 			});
 		});
 	</script>
