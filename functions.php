@@ -44,7 +44,7 @@ function kaingang_setup() {
 	/**
 	 * New image sizes
 	 */
-	add_image_size( 'feature-main', 1600, 300, true );
+	add_image_size( 'feature-main', 1280, 300, true );
 	add_image_size( 'feature-singular', 704, 350, true );
 	add_image_size( 'feature-archive', 370, 270, true );
 
