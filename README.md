@@ -21,3 +21,4 @@ Padrões, guias de estilo e demais documentações serão adicionadas ao [wiki d
 * [Underscores](http://underscores.me)
 * [Normalize.css](http://necolas.github.io/normalize.css/)
 * [HTML5 Boilerplate](http://html5boilerplate.com/)
+* [FlexSlider](http://flexslider.woothemes.com)
