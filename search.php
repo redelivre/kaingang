@@ -12,7 +12,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="page-header box">
 				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'kaingang' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 

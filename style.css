@@ -448,6 +448,10 @@ a:active {
 	background: #fff;
 }
 
+.box {
+	margin-bottom: 1.5em;
+}
+
 
 /* ==========================================================================
    3.0 - Header
@@ -598,9 +602,7 @@ a:active {
 
 /* General archive titles */
 .page-title {
-	margin-top: 0;
-	padding: 1em;
-	background: #fff;
+	margin: 0;
 	font-size: 1.5em;
 	font-weight: 300;
 	text-transform: uppercase;
@@ -783,13 +785,8 @@ object {
    7.0 - Events / agenda
    ========================================================================== */
 
-.events-list {
+.events {
 	margin-bottom: 1.5em;
-}
-
-.home .events-list {
-	padding: 1em 1.5em;
-	background: #fff;
 }
 
 .events-list .hentry {
