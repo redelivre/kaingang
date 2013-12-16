@@ -14,7 +14,7 @@
 		<div class="wrap">
 			<?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
 			<div id="tertiary" class="widget-area widget-area--footer clear" role="complementary">
-				<?php echo dynamic_sidebar( 'sidebar-footer' ); ?>
+				<?php dynamic_sidebar( 'sidebar-footer' ); ?>
 			</div><!-- .widget-area -->
 			<?php endif; ?>
 
