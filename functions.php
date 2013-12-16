@@ -47,6 +47,7 @@ function kaingang_setup() {
 	add_image_size( 'feature-main', 1280, 300, true );
 	add_image_size( 'feature-singular', 704, 350, true );
 	add_image_size( 'feature-archive', 370, 270, true );
+	add_image_size( 'feature-archive--small', 255, 168, true );
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.

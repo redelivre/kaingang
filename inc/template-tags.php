@@ -203,7 +203,7 @@ function kaingang_the_event() {
 			<div class="event">
 		    	<?php if ( has_post_thumbnail() ) : ?>
 					<div class="entry-image entry-image--event">
-						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'feature-event' ); ?></a>
+						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'feature-archive--small' ); ?></a>
 					</div><!-- .entry-image--event -->
 				<?php endif ?>
 				<h3 class="entry-title entry-title--event"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
