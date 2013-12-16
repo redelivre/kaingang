@@ -12,7 +12,6 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrap">
-
 			<?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
 			<div id="tertiary" class="widget-area widget-area--footer clear" role="complementary">
 				<?php echo dynamic_sidebar( 'sidebar-footer' ); ?>
