@@ -460,7 +460,6 @@ a:active {
 	clear: both;
 }
 
-
 /* ==========================================================================
    2.0 - Basic Structure
    ========================================================================== */
@@ -726,6 +725,18 @@ a:active {
    4.4 - Media
    ========================================================================== */
 
+.entry-image {
+	position: relative;
+}
+
+.entry-image img {
+	vertical-align: middle;
+}
+
+.singular .entry-image {
+	margin: 0 -1.5em 1.5em;
+}
+
 /* Used in reference to the media object: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/ */
 .media:nth-of-type(odd) .entry-image {
 	margin: -1.5em 1.5em -1.5em -1.5em;
@@ -737,12 +748,28 @@ a:active {
 	float: right;
 }
 
-.entry-image img {
-	vertical-align: middle;
+/* Arrows */
+.media .entry-image a:after {
+	height: 0;
+	position: absolute;
+		top: 1em;
+	width: 0; 
+	content: " ";
 }
 
-.singular .entry-image {
-	margin: 0 -1.5em 1.5em;
+.media:nth-of-type(odd) .entry-image a:after { 
+	right: 0;
+	border-right: 20px solid #fff;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+}
+
+.media:nth-of-type(even) .entry-image a:after {
+	left: 0;
+	border-left: 20px solid #fff;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent; 
+	
 }
 
 .page-content img.wp-smiley,
