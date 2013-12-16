@@ -72,4 +72,28 @@
 		</div><!-- .feature -->
 	<?php endif; // is_home() ?>
 
+	<div class="box clear">
+		<div class="wrap">
+			<?php
+			$social = get_option( 'campanha_social_networks' );
+			if ( isset( $social )) : ?>
+				<div class="social-networks">
+					<h6><?php _e( 'Find us', 'kaingang' ); ?></h6>
+					<?php
+					foreach ( $social as $key => $value ) :
+						if ( ! empty( $value) ) : ?>
+							<a class="social-link" href="<?php echo esc_url( $value ); ?>"><span class="icon icon-<?php echo $key; ?>"></span></a>
+						<?php
+						endif;
+					endforeach;
+					?>
+				</div><!-- .social networks -->
+			<?php endif; ?>
+			<div class="search-form-wrapper">
+				<h6><?php _e( 'Search for:', 'kaingang' ); ?></h6>
+				<?php get_search_form(); ?>
+			</div>
+		</div>
+	</div>
+
 	<div id="content" class="site-content wrap">
