@@ -16,6 +16,11 @@
 			$( '.site-description' ).text( to );
 		} );
 	} );
+	wp.customize( 'kaingang_footer_text', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-text' ).text( to );
+		} );
+	} );
 	// Header text color.
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {

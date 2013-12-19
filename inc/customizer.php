@@ -71,6 +71,7 @@ function kaingang_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'kaingang_footer_text' )->transport = 'postMessage';
 
 	// Site title & tagline
 	$wp_customize->add_setting( 'kaingang_display_header_text', array(
@@ -125,6 +126,24 @@ function kaingang_customize_register( $wp_customize ) {
 	    'choices'  => array( 'light' => __( 'Light', 'kaingang' ), 'dark' => __( 'Dark', 'kaingang' ) ),
 	    'priority' => 5,
 	    'settings' => 'kaingang_color_scheme'
+	) );
+
+	// Footer section
+	$wp_customize->add_section( 'kaingang_footer', array(
+		'title'    => __( 'Footer', 'kaingang' ),
+		'priority' => 60,
+	) );
+	
+	// Footer section: footer text
+	$wp_customize->add_setting( 'kaingang_footer_text', array(
+		'default'    => get_option( 'name' ),
+		'capability'  	=> 'edit_theme_options',
+	) );
+
+    $wp_customize->add_control( 'kaingang_footer_text', array(
+		'label'    => __( 'Footer Text', 'kaingang' ),
+		'section'  => 'kaingang_footer',
+		'settings' => 'kaingang_footer_text'
 	) );
 
 }
