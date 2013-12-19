@@ -27,10 +27,10 @@ function kaingang_content_nav( $nav_id ) {
 	if ( $wp_query->max_num_pages < 2 && ( is_home() || is_archive() || is_search() ) )
 		return;
 
-	$nav_class = ( is_single() ) ? 'post-navigation' : 'paging-navigation';
+	$nav_class = ( is_single() ) ? 'post-navigation' : 'paging-navigation box';
 
 	?>
-	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?> box">
+	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'kaingang' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>

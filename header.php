@@ -37,7 +37,7 @@
 			</div>
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<h1 class="menu-toggle"><?php _e( 'Menu', 'kaingang' ); ?></h1>
+				<h1 class="menu-toggle"><span class="icon-menu"><?php _e( 'Menu', 'kaingang' ); ?></span></h1>
 				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'kaingang' ); ?></a>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
@@ -71,7 +71,7 @@
 			<?php endif; ?>
 		</div><!-- .feature -->
 	
-		<div class="box clear">
+		<div class="extra-bar box clear">
 			<div class="wrap">
 				<?php
 				$social = get_option( 'campanha_social_networks' );

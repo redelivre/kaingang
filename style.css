@@ -337,7 +337,7 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-	padding: 3px;
+	padding: 0.25em;
 }
 
 textarea {
@@ -399,6 +399,7 @@ a:active {
 	line-height: 1em;
 }
  
+.icon-menu:before { content: '\e806'; }
 .icon-rss:before { content: '\e803'; } 
 .icon-youtube:before { content: '\e804'; }
 .icon-twitter:before { content: '\e805'; }
@@ -516,6 +517,10 @@ a:active {
    ========================================================================== */
 
 .menu-item {
+	padding: 0.5em 1em 0.5em 0;
+}
+
+.sub-menu .menu-item {
 	padding: 0.5em;
 }
 
@@ -576,6 +581,8 @@ a:active {
 .menu-toggle {
 	cursor: pointer;
 	display: none;
+	font-weight: 300;
+	font-size: 1.5em;
 }
 
 @media screen and (max-width: 600px) {
@@ -619,13 +626,8 @@ a:active {
    ========================================================================== */
 .social-networks,
 .search-form-wrapper {
-	float: left;
-	padding: 0 1em;
-	width: 50%;
-}
-
-.social-networks {
-	text-align: right;
+	padding: 1em;
+	text-align: center;
 }
 
 .social-networks .icon {
@@ -638,6 +640,10 @@ a:active {
 
 .search-form-wrapper .search-submit {
 	display: none;
+}
+
+.search-form-wrapper .search-field {
+	width: 100%;
 }
 
 /* ==========================================================================
@@ -946,6 +952,23 @@ object {
    8.0 - Media queries
    ========================================================================== */
 
+@media only screen and (min-width: 43em) {
+	/* Extra bar */
+	.social-networks,
+	.search-form-wrapper {
+		float: left;
+		width: 50%;
+	}
+
+	.social-networks {
+		text-align: right;
+	}
+
+	.search-form-wrapper {
+		text-align: left;
+	}
+}
+
 @media only screen and (min-width: 60em) {
 
 	/* Basic column structure */
@@ -974,7 +997,6 @@ object {
 
 	.main-navigation {
 		float: right;
-		width: 66%;
 	}
 
     .content-area {
