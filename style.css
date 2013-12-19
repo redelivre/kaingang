@@ -487,7 +487,8 @@ a:active {
 
 /* Define a white box for most of the elements */
 .box,
-.singular .site-main {
+.singular .site-main,
+.search .site-main {
 	padding: 1.5em;
 	background: #fff;
 }
@@ -906,6 +907,11 @@ object {
 /* ==========================================================================
    6.0 - Footer
    ========================================================================== */
+
+.widget-area--footer + .site-info {
+	padding-top: 1.5em;
+	border-top: 1px solid #ececec;
+}
 
 /* ==========================================================================
    7.0 - Events / agenda
