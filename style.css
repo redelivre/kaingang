@@ -486,6 +486,10 @@ a:active {
 	background-color: #fff;
 }
 
+.site-logo {
+	max-width: 255px;
+}
+
 /* Define a white box for most of the elements */
 .box,
 .singular .site-main,

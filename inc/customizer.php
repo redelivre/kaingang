@@ -34,9 +34,7 @@ function kaingang_customize_register( $wp_customize ) {
 		 * @param WP_Customize_Manager $manager
 		 */
 		public function __construct( $manager, $id, $args = array() ) {
-		
-		parent::__construct( $manager, $id, $args );
-		       
+			parent::__construct( $manager, $id, $args );
 		}
 		
 		/**
@@ -45,26 +43,26 @@ function kaingang_customize_register( $wp_customize ) {
 		* 
 		*/
 		public function tab_uploaded() {
-		$my_context_uploads = get_posts( array(
-		    'post_type'  => 'attachment',
-		    'meta_key'   => '_wp_attachment_context',
-		    'meta_value' => $this->context,
-		    'orderby'    => 'post_date',
-		    'nopaging'   => true,
-		) );
-		
-		?>
-		
-		<div class="uploaded-target"></div>
-		
-		<?php
-		if ( empty( $my_context_uploads ) )
-		    return;
-		
-		foreach ( (array) $my_context_uploads as $my_context_upload )
-		    $this->print_tab_image( esc_url_raw( $my_context_upload->guid ) );
+			$my_context_uploads = get_posts( array(
+			    'post_type'  => 'attachment',
+			    'meta_key'   => '_wp_attachment_context',
+			    'meta_value' => $this->context,
+			    'orderby'    => 'post_date',
+			    'nopaging'   => true,
+			) );
+			
+			?>
+			
+			<div class="uploaded-target"></div>
+			
+			<?php
+			if ( empty( $my_context_uploads ) )
+			    return;
+			
+			foreach ( (array) $my_context_uploads as $my_context_upload ) {
+			    $this->print_tab_image( esc_url_raw( $my_context_upload->guid ) );
+			}
 		}
-		
 	}
 
 	// Add postMessage support for site title and description for the Theme Customizer.
@@ -93,7 +91,7 @@ function kaingang_customize_register( $wp_customize ) {
 	
 	// Branding section: logo uploader
 	$wp_customize->add_setting( 'kaingang_logo', array(
-		'capability'  => 'edit_theme_options',
+		'capability'  => 'edit_theme_options'
 	) );
 	
     $wp_customize->add_control( new My_Customize_Image_Reloaded_Control( $wp_customize, 'kaingang_logo', array(
