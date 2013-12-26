@@ -12,18 +12,18 @@
 		$sidebar = ( is_home() ) ? 'sidebar-main' : 'sidebar-internal'; ?>
 		<?php if ( ! dynamic_sidebar( $sidebar ) ) : ?>
 
-			<aside id="search" class="widget widget_search">
+			<aside id="search" class="widget widget_search box">
 				<?php get_search_form(); ?>
 			</aside>
 
-			<aside id="archives" class="widget">
+			<aside id="archives" class="widget box">
 				<h3 class="widget-title"><?php _e( 'Archives', 'kaingang' ); ?></h3>
 				<ul>
 					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 				</ul>
 			</aside>
 
-			<aside id="meta" class="widget">
+			<aside id="meta" class="widget box">
 				<h3 class="widget-title"><?php _e( 'Meta', 'kaingang' ); ?></h3>
 				<ul>
 					<?php wp_register(); ?>

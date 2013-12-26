@@ -171,20 +171,29 @@ function kaingang_customize_css() {
 	<style type="text/css">
 		<?php
 		$color_scheme = get_theme_mod( 'kaingang_color_scheme' );
-		if ( isset( $color_scheme ) && ! empty( $color_scheme ) ) : ?>
-		.site-header,
-		.site-footer {
-			background-color: <?php echo ( $color_scheme == 'light' ) ? '#fff' : '#000'; ?>;
-		}
+		if ( isset( $color_scheme ) && $color_scheme == 'dark' ) : ?>
+			.site-header,
+			.site-footer {
+				background-color: #000;
+				color: #fff;
+			}
+
+			.main-navigation ul ul {
+				background: #000;
+			}
+
+			.widget-area--footer + .site-info {
+				border-color: #222;
+			}
 		<?php endif; ?>
 
 		<?php if ( get_theme_mod( 'kaingang_display_header_text' ) == '' ) : ?>
-		/* Header text */
-		.site-title,
-		.site-description {
-			clip: rect(1px, 1px, 1px, 1px) !important;
-			position: absolute !important;
-		}
+			/* Header text */
+			.site-title,
+			.site-description {
+				clip: rect(1px, 1px, 1px, 1px) !important;
+				position: absolute !important;
+			}
 		<?php endif; ?>
 
         <?php
