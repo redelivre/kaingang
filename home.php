@@ -7,37 +7,42 @@
 
 get_header(); ?>
 
-	<div class="events box clear">
-		<h3 class="page-title">Agenda</h3>
-		<div class="events-list">
-			
-			<?php
-			$args = array(
-		        'posts_per_page' 	=> 4,
-		        'post_type'			=> 'agenda',
-		        'orderby' 			=> 'meta_value',
-		        'meta_key'			=> '_data_inicial',
-		        'order'				=> 'ASC',
-		        'meta_query'		=> array(
-		            array(
-		                'key' => '_data_final',
-		                'value' => date('Y-m-d'),
-		                'compare' => '>=',
-		                'type' => 'DATETIME'
-		            )
-		        )
-		    );
-	        
-	        $events = new WP_Query( $args );
-	        
-	        if ( $events->have_posts() ) : while ( $events->have_posts() ) : $events->the_post();
-	        	kaingang_the_event();
-	        endwhile; endif;
+	<?php
+	// Events arguments
+	$args = array(
+        'posts_per_page' 	=> 4,
+        'post_type'			=> 'agenda',
+        'orderby' 			=> 'meta_value',
+        'meta_key'			=> '_data_inicial',
+        'order'				=> 'ASC',
+        'meta_query'		=> array(
+            array(
+                'key' => '_data_final',
+                'value' => date('Y-m-d'),
+                'compare' => '>=',
+                'type' => 'DATETIME'
+            )
+        )
+    );
 
-	        wp_reset_postdata();
-	        ?>
+	$events = new WP_Query( $args );
+	        
+	if ( $events->have_posts() ) : ?>
+		<div class="events box clear">
+			<h3 class="page-title">Agenda</h3>
+			<div class="events-list">
+				
+				<?php
+		        
+		        while ( $events->have_posts() ) : $events->the_post();
+		        	kaingang_the_event();
+		        endwhile;
+
+		        wp_reset_postdata();
+		        ?>
+			</div>
 		</div>
-	</div>
+	<?php endif; ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
