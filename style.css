@@ -468,6 +468,7 @@ a:active {
 .wrap {
 	margin: 0 auto;
 	max-width: 68.75em;
+	position: relative;
 	width: 100%;
 }
 
@@ -1005,7 +1006,9 @@ object {
 	}
 
 	.main-navigation {
-		float: right;
+		position: absolute;
+			bottom: 0;
+			right: 0;
 	}
 
     .content-area {

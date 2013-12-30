@@ -22,7 +22,7 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
-		<div class="wrap">
+		<div class="wrap clear">
 			<div class="site-branding">
 				<?php
 				// Check if there's a custom logo
