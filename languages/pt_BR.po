@@ -1,0 +1,345 @@
+# Translation of Kaingang in Portuguese (Brazil)
+# This file is distributed under the same license as the Kaingang package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2013-12-27 10:58-0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Kaingang\n"
+"POT-Creation-Date: \n"
+"Last-Translator: Eduardo Zulian <eduardozulian@gmail.com>\n"
+"Language-Team: \n"
+
+#: content-agenda.php:77
+#: content-single.php:48
+msgid "Categories"
+msgstr "Categorias"
+
+#: content-agenda.php:80
+#: content-page.php:29
+#: content-single.php:51
+#: image.php:32
+#: image.php:64
+#: inc/template-tags.php:71
+#: inc/template-tags.php:90
+msgid "Edit"
+msgstr "Editar"
+
+#: footer.php:29
+msgid "Proudly powered by %s"
+msgstr "Orgulhosamente criado com %s"
+
+#: functions.php:56
+msgid "Primary Menu"
+msgstr "Menu primário"
+
+#: functions.php:80
+msgid "Home Sidebar"
+msgstr "Barra lateral da capa"
+
+#: functions.php:82
+msgid "The main sidebar, displayed on the front page"
+msgstr "A barra lateral principal, exibida na capa do site"
+
+#: functions.php:90
+msgid "Internal Sidebar"
+msgstr "Barra lateral interna"
+
+#: functions.php:92
+msgid "The secondary sidebar, displayed internally"
+msgstr "A barra lateral secundária, exibida nas páginas internas"
+
+#: functions.php:100
+msgid "Footer Widget Area"
+msgstr "Área de widgets do rodapé"
+
+#: functions.php:102
+msgid "Appears on your footer"
+msgstr "É exibida no rodapé do site"
+
+#: header.php:40
+msgid "Menu"
+msgstr "Menu"
+
+#: header.php:41
+msgid "Skip to content"
+msgstr "Pular para o conteúdo"
+
+#: header.php:80
+msgid "Find us"
+msgstr "Encontre-nos"
+
+#: header.php:92
+msgid "Search for:"
+msgstr "Pesquise por:"
+
+#: image.php:22
+msgid "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s &times; %5$s</a> in <a href=\"%6$s\" rel=\"gallery\">%7$s</a>"
+msgstr "Publicado em <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s &times; %5$s</a> em <a href=\"%6$s\" rel=\"gallery\">%7$s</a>"
+
+#: image.php:37
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr "<span class=\"meta-nav\">&larr;</span> Anterior"
+
+#: image.php:38
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Próximo <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/customizer.php:80
+msgid "Display header text"
+msgstr "Exibir texto do cabeçalho"
+
+#: inc/customizer.php:88
+msgid "Branding"
+msgstr "Marca"
+
+#: inc/customizer.php:98
+msgid "Logo"
+msgstr "Logo"
+
+#: inc/customizer.php:110
+msgid "Link Color"
+msgstr "Cor dos links"
+
+#: inc/customizer.php:121
+msgid "Color Scheme"
+msgstr "Esquema de cores"
+
+#: inc/customizer.php:124
+msgid "Light"
+msgstr "Claro"
+
+#: inc/customizer.php:124
+msgid "Dark"
+msgstr "Escuro"
+
+#: inc/customizer.php:131
+msgid "Footer"
+msgstr "Rodapé"
+
+#: inc/customizer.php:142
+msgid "Footer Text"
+msgstr "Texto do rodapé"
+
+#: inc/extras.php:68
+msgid "Page %s"
+msgstr "Página %s"
+
+#: inc/template-tags.php:34
+msgid "Post navigation"
+msgstr "Navegação de posts"
+
+#: inc/template-tags.php:38
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: inc/template-tags.php:39
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: inc/template-tags.php:44
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Posts antigos"
+
+#: inc/template-tags.php:48
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Posts recentes <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:71
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: inc/template-tags.php:81
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">disse:</span>"
+
+#: inc/template-tags.php:87
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s às %2$s"
+
+#: inc/template-tags.php:94
+msgid "Your comment is awaiting moderation."
+msgstr "Seu comentário está aguardando para ser moderado."
+
+#: inc/template-tags.php:185
+msgid "<span class=\"posted-on\">Posted on %s</span>"
+msgstr "<span class=\"posted-on\">Publicado em %s</span>"
+
+#: no-results.php:13
+msgid "Nothing Found"
+msgstr "Nada encontrado"
+
+#: no-results.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Pronto para fazer sua primeira publicação? <a href=\"%1$s\">Comece aqui</a>."
+
+#: no-results.php:23
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Desculpe, mas não encontramos nada. Por favor, tente de novo usando outras palavras."
+
+#: no-results.php:28
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Parece que não encontramos o que você estava procurando. Que tal fazer uma pesquisa?"
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Resultados da pesquisa por: %s"
+
+#: searchform.php:10
+msgctxt "label"
+msgid "Search for:"
+msgstr "Pesquise por:"
+
+#: searchform.php:11
+msgctxt "placeholder"
+msgid "Type your search and press enter"
+msgstr "Digite sua pesquisa e aperte enter"
+
+#: searchform.php:13
+msgctxt "submit button"
+msgid "Search"
+msgstr "Pesquisar"
+
+#: sidebar.php:27
+msgid "Meta"
+msgstr "Meta"
+
+msgid "Kaingang"
+msgstr "Kaingang"
+
+msgid "http://kaingang.redelivre.org.br"
+msgstr "http://kaingang.redelivre.org.br"
+
+msgid "Description"
+msgstr "Descrição"
+
+msgid "Rede Livre"
+msgstr "Rede Livre"
+
+msgid "http://redelivre.org.br"
+msgstr "http://redelivre.org.br"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ops, a página não foi encontrada!"
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Aparentemente, nada foi encontrado aqui. Que tal tentar algum dos links abaixo ou, quem sabe, fazer uma pesquisa?"
+
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr "Categorias mais usadas"
+
+#: 404.php:44
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Tente procurar nos arquivos mensais: %1$s"
+
+#: archive.php:31
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: archive.php:39
+msgid "Day: %s"
+msgstr "Dia: %s"
+
+#: archive.php:42
+msgid "Month: %s"
+msgstr "Mês: %s"
+
+#: archive.php:45
+msgid "Year: %s"
+msgstr "Ano: %s"
+
+#: archive.php:48
+msgid "Asides"
+msgstr "Notas"
+
+#: archive.php:51
+msgid "Images"
+msgstr "Imagens"
+
+#: archive.php:54
+msgid "Videos"
+msgstr "Vídeos"
+
+#: archive.php:57
+msgid "Quotes"
+msgstr "Citações"
+
+#: archive.php:60
+msgid "Links"
+msgstr "Links"
+
+#: archive.php:63
+#: sidebar.php:20
+msgid "Archives"
+msgstr "Arquivos"
+
+#: comments.php:29
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Um comentário sobre \"%2$s\""
+msgstr[1] "%1$s comentários sobre \"%2$s\""
+
+#: comments.php:36
+#: comments.php:56
+msgid "Comment navigation"
+msgstr "Navegação dos comentários"
+
+#: comments.php:37
+#: comments.php:57
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentários antigos"
+
+#: comments.php:38
+#: comments.php:58
+msgid "Newer Comments &rarr;"
+msgstr "Comentários recentes &rarr;"
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr "Os comentários estão fechados."
+
+#: content-agenda.php:22
+msgid "Date"
+msgstr "Data"
+
+#: content-agenda.php:40
+msgid "Time"
+msgstr "Hora"
+
+#: content-agenda.php:44
+msgid "Location"
+msgstr "Lugar"
+
+#: content-agenda.php:48
+msgid "More info"
+msgstr "Mais informações"
+
+#: content-agenda.php:54
+#: content-page.php:24
+#: content-single.php:25
+#: image.php:58
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: content-agenda.php:63
+#: content-agenda.php:66
+#: content-single.php:34
+#: content-single.php:37
+msgid ", "
+msgstr ", "
+
+#: content-agenda.php:70
+#: content-single.php:41
+msgid "Tags"
+msgstr "Palavras-chave"
+
