@@ -7,7 +7,7 @@
  */
 
 /**
- * Implements Kaingang theme options into Theme Customizer
+ * Implement Kaingang theme options into Theme Customizer
  *
  * @param $wp_customize Theme Customizer object
  * @return void
@@ -65,12 +65,6 @@ function kaingang_customize_register( $wp_customize ) {
 		}
 	}
 
-	// Add postMessage support for site title and description for the Theme Customizer.
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	$wp_customize->get_setting( 'kaingang_footer_text' )->transport = 'postMessage';
-
 	// Site title & tagline
 	$wp_customize->add_setting( 'kaingang_display_header_text', array(
 		'capability' => 'edit_theme_options',
@@ -103,7 +97,7 @@ function kaingang_customize_register( $wp_customize ) {
 
     // Color section: link color
     $wp_customize->add_setting( 'kaingang_link_color', array(
-        'default'     => '#cc0033',
+        'default'     => '#cc0033'
     ) );
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'kaingang_link_color', array(
@@ -129,6 +123,7 @@ function kaingang_customize_register( $wp_customize ) {
 	// Footer section
 	$wp_customize->add_section( 'kaingang_footer', array(
 		'title'    => __( 'Footer', 'kaingang' ),
+		'description' => 'Eita',
 		'priority' => 60,
 	) );
 	
@@ -143,6 +138,14 @@ function kaingang_customize_register( $wp_customize ) {
 		'section'  => 'kaingang_footer',
 		'settings' => 'kaingang_footer_text'
 	) );
+
+	// Add postMessage support for site title and description for the Theme Customizer.
+	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+	$wp_customize->get_setting( 'kaingang_link_color' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'kaingang_footer_text' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'kaingang_display_header_text' )->transport = 'postMessage';
+	
 
 }
 add_action( 'customize_register', 'kaingang_customize_register' );
@@ -189,8 +192,14 @@ function kaingang_customize_css() {
 			/* Header text */
 			.site-title,
 			.site-description {
-				clip: rect(1px, 1px, 1px, 1px) !important;
-				position: absolute !important;
+				clip: rect(1px, 1px, 1px, 1px);
+				position: absolute;
+			}
+		<?php else : ?>
+			.site-title,
+			.site-description {
+				clip: auto;
+				position: relative;
 			}
 		<?php endif; ?>
 
@@ -207,4 +216,20 @@ function kaingang_customize_css() {
 	<?php
 }
 add_action( 'wp_head', 'kaingang_customize_css' );
+
+/**
+ * Add Customizer inside Appearance submenu
+ *
+ * @since  Kaingaing 1.0
+ */
+function kaingang_admin_customizer_menu_link() {
+
+	global $menu;
+
+    if ( current_user_can( 'edit_theme_options' ) ) {
+        add_theme_page( __( 'Customize', 'default' ), __( 'Customize', 'default' ), 'edit_theme_options', 'customize.php' );
+    }
+
+}
+add_action ( 'admin_menu', 'kaingang_admin_customizer_menu_link', 99 );
 ?>

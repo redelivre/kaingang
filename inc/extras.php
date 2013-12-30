@@ -102,4 +102,4 @@ function kaingang_get_customizer_logo_size( $value ) {
 
 	return $value;
 }
-add_filter( 'theme_mod_kaingang_logo', 'kaingang_get_customizer_logo_size' );
+add_filter( 'theme_mod_kaingang_logo', 'kaingang_get_customizer_logo_size', 99 );
