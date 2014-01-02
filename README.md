@@ -10,7 +10,7 @@ O tema de festivais para a Rede Livre, que conta com algumas funcionalidades:
 ## Como contribuir
 Há, basicamente, três formas:
 
-1. Usando o canal de participação [Dev Rede Livre](http://dev.redelivre.org.br/tag/kaingang). Nele serão discutidas todas as ideias acerca do tema.
+1. Usando o canal de participação [Dev Rede Livre](http://dev.redelivre.org.br/category/rede-livre/temas-rede-livre/kaingang). Nele serão discutidas todas as ideias acerca do tema.
 2. Através dos [*issues*](https://github.com/redelivre/kaingang/issues) (incidentes) do GitHub, é possível contribuir rapidamente. Informe sobre um erro, faça sugestões ou tire dúvidas sobre a funcionalidade de algum elemento.
 3. Para contribuir com códigos e novas funcionalidades, é necessário clicar no botão *Fork*, criar um *branch*, arrumar o código e fazer um *pull request*. Leia mais sobre [como colaborar dentro do GitHub](https://help.github.com/categories/63/articles) (em inglês).
 
