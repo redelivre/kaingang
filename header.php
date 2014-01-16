@@ -75,7 +75,7 @@
 			<div class="wrap">
 				<?php
 				$social = get_option( 'campanha_social_networks' );
-				if ( isset( $social )) : ?>
+				if ( isset( $social ) && ! empty ( $social ) ) : ?>
 					<div class="social-networks">
 						<h6><?php _e( 'Find us', 'kaingang' ); ?></h6>
 						<?php
