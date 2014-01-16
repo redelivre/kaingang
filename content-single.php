@@ -29,6 +29,17 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta entry-meta--footer">
+		<div class="entry-share cf">
+			<?php  $post_permalink = get_permalink(); ?>
+            <ul class="share-list cf">
+                <li><a class="share-link share-twitter icon-twitter" title="<?php _e( 'Share on Twitter', 'guarani' ); ?>" href="http://twitter.com/intent/tweet?original_referer=<?php echo $post_permalink; ?>&text=<?php echo $post->post_title; ?>&url=<?php echo $post_permalink; ?>" rel="nofollow" target="_blank"><span class="assistive-text"><?php _e( 'Share on Twitter', 'guarani' ); ?></span></a></li>
+                <li><a class="share-link share-facebook icon-facebook" title="<?php _e( 'Share on Facebook', 'guarani' ); ?>" href="https://www.facebook.com/sharer.php?u=<?php echo $post_permalink; ?>" rel="nofollow" target="_blank"><span class="assistive-text"><?php _e( 'Share on Facebook', 'guarani' ); ?></span></a></li>
+                <li><a class="share-link share-googleplus icon-google" title="<?php _e( 'Share on Google+', 'guarani' ); ?>" href="https://plus.google.com/share?url=<?php echo $post_permalink; ?>" rel="nofollow" target="_blank"><span class="assistive-text"><?php _e( 'Share on Google+', 'guarani' ); ?></span></a></li>
+            </ul>
+            <div class="share-shortlink">
+            	<input type="text" title="<?php _e( 'Click to copy the permalink', 'kaingang' ); ?>" value="<?php if ( $shortlink = wp_get_shortlink( $post->ID ) ) echo $shortlink; else the_permalink(); ?>" onclick="this.focus(); this.select();" readonly="readonly" />
+            </div>
+        </div><!-- .entry-share -->
 		<?php
 		/* translators: used between list items, there is a space after the comma */
         $category_list = get_the_category_list( __( ', ', 'kaingang' ) );

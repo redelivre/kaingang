@@ -737,6 +737,23 @@ a:active {
 	text-transform: uppercase;
 }
 
+.entry-share {
+	margin-bottom: 1.5em;
+}
+
+.share-list {
+	list-style-type: none;
+	margin-bottom: 0;
+}
+
+.share-list li {
+	display: inline-block;
+}
+
+.share-shortlink input {
+	width: 40%;
+}
+
 /*
    4.4 - Media
    ========================================================================== */
