@@ -647,6 +647,32 @@ a:active {
 	font-size: 1.5em;
 }
 
+.social-link:hover .icon {
+	color: #fff;
+}
+
+.social-link:hover .icon-twitter {
+	background: #00aced;
+}
+
+.social-link:hover .icon-facebook,
+.social-link:hover .icon-facebook-page {
+	background: #3b5998;
+}
+
+.social-link:hover .icon-google,
+.social-link:hover .icon-googleplus {
+	background: #dd4b39;
+}
+
+.social-link:hover .icon-youtube {
+	background: #bb0000;
+}
+
+.social-link:hover .icon-rss {
+	background: #ff6600;
+}
+
 .search-form-wrapper .search-submit {
 	display: none;
 }
