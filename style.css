@@ -793,6 +793,10 @@ a:active {
 	display: inline-block;
 }
 
+.share-shortlink {
+	margin-top: 1em;
+}
+
 .share-shortlink input {
 	width: 70%;
 }
@@ -813,39 +817,8 @@ a:active {
 	margin: 0 -1.5em 1.5em;
 }
 
-/* Used in reference to the media object: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/ */
-.media:nth-of-type(odd) .entry-image {
-	margin: -1.5em 1.5em -1.5em -1.5em;
-	float: left;
-}
-
-.media:nth-of-type(even) .entry-image {
-	margin: -1.5em -1.5em -1.5em 1.5em;
-	float: right;
-}
-
-/* Arrows */
-.media .entry-image a:after {
-	height: 0;
-	position: absolute;
-		top: 1em;
-	width: 0; 
-	content: " ";
-}
-
-.media:nth-of-type(odd) .entry-image a:after { 
-	right: 0;
-	border-right: 20px solid #fff;
-	border-top: 20px solid transparent;
-	border-bottom: 20px solid transparent;
-}
-
-.media:nth-of-type(even) .entry-image a:after {
-	left: 0;
-	border-left: 20px solid #fff;
-	border-top: 20px solid transparent;
-	border-bottom: 20px solid transparent; 
-	
+.media .entry-image {
+	margin-bottom: 1em;
 }
 
 .page-content img.wp-smiley,
@@ -1022,6 +995,43 @@ object {
    8.0 - Media queries
    ========================================================================== */
 
+@media only screen and (min-width: 38em) {
+
+	/* Used in reference to the media object: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/ */
+	.media:nth-of-type(odd) .entry-image {
+		margin: -1.5em 1.5em -1.5em -1.5em;
+		float: left;
+	}
+
+	.media:nth-of-type(even) .entry-image {
+		margin: -1.5em -1.5em -1.5em 1.5em;
+		float: right;
+	}
+
+	/* Arrows */
+	.media .entry-image a:after {
+		height: 0;
+		position: absolute;
+			top: 1em;
+		width: 0; 
+		content: " ";
+	}
+
+	.media:nth-of-type(odd) .entry-image a:after { 
+		right: 0;
+		border-right: 20px solid #fff;
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+	}
+
+	.media:nth-of-type(even) .entry-image a:after {
+		left: 0;
+		border-left: 20px solid #fff;
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent; 
+	}
+}
+
 @media only screen and (min-width: 43em) {
 	/* Extra bar */
 	.social-networks,
@@ -1042,6 +1052,10 @@ object {
 	.share-shortlink {
 		float: left;
 		width: 50%;
+	}
+
+	.share-shortlink {
+		margin-top: 0;
 	}
 }
 
@@ -1075,6 +1089,7 @@ object {
 		position: absolute;
 			bottom: 0;
 			right: 0;
+		width: 66%;
 	}
 
     .content-area {
