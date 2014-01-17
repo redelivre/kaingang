@@ -168,6 +168,11 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Load post2home for featured posts
+ */
+require get_template_directory() . '/inc/hacklab_post2home/hacklab_post2home.php';
+
 function kaingang_footer_scripts() {
 	?> 
 	<!-- FlexSlider -->

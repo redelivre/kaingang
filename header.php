@@ -48,7 +48,7 @@
 	<?php if ( is_home() ) : ?>
 		<div class="feature flexslider js-flexslider">
 			<?php
-	        $featured_posts = new WP_Query( array( 'posts_per_page' => 4 ) );
+	        $featured_posts = new WP_Query( array( 'posts_per_page' => 5, 'meta_key' => '_home', 'meta_value' => 1, 'ignore_sticky_posts' => 1 ) );
 	        
 	        if ( $featured_posts->have_posts() ) : ?>
 		        <div class="flexslider-slides">
