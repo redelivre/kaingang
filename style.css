@@ -550,6 +550,7 @@ a:active {
 
 .main-navigation a {
 	display: block;
+	font-weight: 400;
 }
 
 .main-navigation ul ul {
