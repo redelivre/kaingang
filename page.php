@@ -38,6 +38,11 @@ get_header(); ?>
 							) );
 						?>
 					</div><!-- .entry-content -->
+
+					<footer class="entry-meta entry-meta--footer">
+						<?php kaingang_social_share(); ?>
+					</footer>
+					
 				</article><!-- #post-## -->
 
 			<?php endwhile; // end of the loop. ?>

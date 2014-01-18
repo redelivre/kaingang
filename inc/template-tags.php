@@ -249,6 +249,28 @@ function kaingang_the_event() {
 endif;
 
 /**
+ * Add a container with social links
+ */
+function kaingang_social_share() {
+	global $post;
+	?>
+	<div class="entry-share entry-meta-box clear">
+		<?php $post_permalink = get_permalink(); ?>
+		<div class="share-list">
+			<span class="meta-title"><?php _e( 'Share', 'kaingang' ); ?></span>
+            <a class="social-link share-twitter" title="<?php _e( 'Share on Twitter', 'guarani' ); ?>" href="http://twitter.com/intent/tweet?original_referer=<?php echo $post_permalink; ?>&text=<?php echo $post->post_title; ?>&url=<?php echo $post_permalink; ?>" rel="nofollow" target="_blank"><span class="icon icon-twitter"></span></a>
+            <a class="social-link share-facebook" title="<?php _e( 'Share on Facebook', 'guarani' ); ?>" href="https://www.facebook.com/sharer.php?u=<?php echo $post_permalink; ?>" rel="nofollow" target="_blank"><span class="icon icon-facebook"></span></a>
+            <a class="social-link share-googleplus" title="<?php _e( 'Share on Google+', 'guarani' ); ?>" href="https://plus.google.com/share?url=<?php echo $post_permalink; ?>" rel="nofollow" target="_blank"><span class="icon icon-google"></span></a>
+        </div><!-- .share-list -->
+    
+    	<div class="share-shortlink">
+    		<span class="meta-title"><?php _e( 'Link', 'kaingang' ); ?></span><input type="text" title="<?php _e( 'Click to copy the permalink', 'kaingang' ); ?>" value="<?php if ( $shortlink = wp_get_shortlink( $post->ID ) ) echo $shortlink; else the_permalink(); ?>" onclick="this.focus(); this.select();" readonly="readonly" />
+    	</div><!-- .share-shortlink -->
+    </div><!-- .entry-share -->
+<?php
+}
+
+/**
  * Returns true if a blog has more than 1 category
  */
 function kaingang_categorized_blog() {

@@ -725,7 +725,8 @@ a:active {
 	text-transform: uppercase;
 }
 
-.single .entry-content {
+.single .entry-content,
+.page .entry-content {
 	border-bottom: 1px solid #ececec;
 }
 
