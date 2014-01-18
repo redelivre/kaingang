@@ -26,6 +26,19 @@
         } );
     } );
 
+    // Events list
+    wp.customize( 'kaingang_display_events', function( value ) {
+        value.bind( function( to ) {
+            if ( to === false ) {
+                $( '.events' ).css( 'display', 'none' );
+                
+            }
+            else {
+                $( '.events' ).css( 'display', 'block' );
+            }
+        } );
+    } );
+
     // Color scheme
     wp.customize( 'kaingang_color_scheme', function( value ) {
         value.bind( function( to ) {

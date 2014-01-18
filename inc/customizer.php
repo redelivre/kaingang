@@ -96,6 +96,27 @@ function kaingang_customize_register( $wp_customize ) {
         'context'	=> 'kaingang-custom-logo'
     ) ) );
 
+    // Branding section
+	$wp_customize->add_section( 'kaingang_events', array(
+		'title'    => __( 'Events', 'kaingang' ),
+		'priority' => 30,
+	) );
+
+    $wp_customize->add_setting( 'kaingang_display_events', array(
+		'capability'	=> 'edit_theme_options',
+		'default'		=> true,
+		'transport'		=> 'postMessage'
+	) );
+
+	$wp_customize->add_control( 'kaingang_display_events', array(
+		'label'    => __( 'Display events list on Home', 'kaingang' ),
+		'section'  => 'kaingang_events',
+		'type'     => 'checkbox',
+		'settings' => 'kaingang_display_events'
+	) );
+
+
+
     // Color section: link color
     $wp_customize->add_setting( 'kaingang_link_color', array(
         'default'     => '#cc0033',

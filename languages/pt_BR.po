@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Kaingang package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-01-18 16:54-0300\n"
+"PO-Revision-Date: 2014-01-18 17:24-0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,7 +13,16 @@ msgstr ""
 "Last-Translator: Eduardo Zulian <eduardozulian@gmail.com>\n"
 "Language-Team: \n"
 
-#: inc/customizer.php:255
+#: home.php:34
+#: inc/customizer.php:101
+msgid "Events"
+msgstr "Agenda"
+
+#: inc/customizer.php:112
+msgid "Display events list on Home"
+msgstr "Exibir agenda na capa"
+
+#: inc/customizer.php:276
 msgid "Customize"
 msgstr "Personalizar"
 
@@ -147,27 +156,27 @@ msgstr "Marca"
 msgid "Logo"
 msgstr "Logo"
 
-#: inc/customizer.php:106
+#: inc/customizer.php:127
 msgid "Link Color"
 msgstr "Cor dos links"
 
-#: inc/customizer.php:118
+#: inc/customizer.php:139
 msgid "Color Scheme"
 msgstr "Esquema de cores"
 
-#: inc/customizer.php:121
+#: inc/customizer.php:142
 msgid "Light"
 msgstr "Claro"
 
-#: inc/customizer.php:121
+#: inc/customizer.php:142
 msgid "Dark"
 msgstr "Escuro"
 
-#: inc/customizer.php:128
+#: inc/customizer.php:149
 msgid "Footer"
 msgstr "Rodapé"
 
-#: inc/customizer.php:139
+#: inc/customizer.php:160
 msgid "Footer Text"
 msgstr "Texto do rodapé"
 

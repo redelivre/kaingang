@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kaingang 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/kaingang\n"
-"POT-Creation-Date: 2014-01-18 18:47:01+00:00\n"
+"POT-Creation-Date: 2014-01-18 19:22:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -142,6 +142,10 @@ msgstr ""
 msgid "Search for:"
 msgstr ""
 
+#: home.php:34 inc/customizer.php:101
+msgid "Events"
+msgstr ""
+
 #: image.php:22
 msgid ""
 "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
@@ -178,31 +182,35 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: inc/customizer.php:106
+#: inc/customizer.php:112
+msgid "Display events list on Home"
+msgstr ""
+
+#: inc/customizer.php:127
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer.php:118
+#: inc/customizer.php:139
 msgid "Color Scheme"
 msgstr ""
 
-#: inc/customizer.php:121
+#: inc/customizer.php:142
 msgid "Light"
 msgstr ""
 
-#: inc/customizer.php:121
+#: inc/customizer.php:142
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:128
+#: inc/customizer.php:149
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer.php:139
+#: inc/customizer.php:160
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer.php:255
+#: inc/customizer.php:276
 msgid "Customize"
 msgstr ""
 
