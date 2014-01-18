@@ -26,30 +26,25 @@
         } );
     } );
 
+    // Color scheme
+    wp.customize( 'kaingang_color_scheme', function( value ) {
+        value.bind( function( to ) {
+            if ( to == 'light' ) {
+                $( '.site-header, .site-footer' ).css( 'background-color', '#fff' );
+                $( '.site-description, .site-footer' ).css( 'color', '#000' );
+            }
+            else {
+                $( '.site-header, .site-footer' ).css( 'background-color', '#000' );
+                $( '.site-description, .site-footer' ).css( 'color', '#fff' );
+                $( '.widget-area--footer + .site-info' ).css( 'border-color', '#222' );
+            }
+        } );
+    } );
+
     // Footer text
 	wp.customize( 'kaingang_footer_text', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-text' ).text( to );
-		} );
-	} );
-
-	// Header text color.
-	wp.customize( 'kaingang_display_header_text', function( value ) {
-		value.bind( function( to ) {
-			console.log(to);
-			if ( false === to ) {
-				console.log('n exibir');
-				$( '.site-title, .site-description' ).css( {
-					'clip': 'rect(1px, 1px, 1px, 1px)',
-					'position': 'absolute'
-				} );
-			} else {
-				console.log('exibir');
-				$( '.site-title, .site-description' ).css( {
-					'clip': 'auto',
-					'position': 'relative'
-				} );
-			}
 		} );
 	} );
 } )( jQuery );

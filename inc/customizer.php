@@ -98,7 +98,8 @@ function kaingang_customize_register( $wp_customize ) {
 
     // Color section: link color
     $wp_customize->add_setting( 'kaingang_link_color', array(
-        'default'     => '#cc0033'
+        'default'     => '#cc0033',
+        'transport'  => 'postMessage'
     ) );
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'kaingang_link_color', array(
@@ -109,7 +110,8 @@ function kaingang_customize_register( $wp_customize ) {
 
     // Color section: color scheme
 	$wp_customize->add_setting( 'kaingang_color_scheme', array(
-	    'default'    => 'light'
+	    'default'    => 'light',
+	    'transport'  => 'postMessage'
 	) );
 
 	$wp_customize->add_control( 'kaingang_color_scheme', array(
@@ -124,7 +126,6 @@ function kaingang_customize_register( $wp_customize ) {
 	// Footer section
 	$wp_customize->add_section( 'kaingang_footer', array(
 		'title'    => __( 'Footer', 'kaingang' ),
-		'description' => 'Eita',
 		'priority' => 60,
 	) );
 	
@@ -143,7 +144,6 @@ function kaingang_customize_register( $wp_customize ) {
 	// Add postMessage support for site title and description for the Theme Customizer.
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'kaingang_link_color' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'kaingang_footer_text' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'kaingang_display_header_text' )->transport = 'postMessage';
 	
