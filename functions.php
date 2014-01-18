@@ -181,6 +181,8 @@ function kaingang_footer_scripts() {
 		    jQuery('.js-flexslider').flexslider({
 				animation: "slide",
 				selector: ".flexslider-slides > .flexslider-slide-wrapper",
+				prevText: "",
+				nextText: ""
 			});
 		});
 	</script>
