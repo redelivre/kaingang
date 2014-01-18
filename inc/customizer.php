@@ -85,7 +85,8 @@ function kaingang_customize_register( $wp_customize ) {
 	
 	// Branding section: logo uploader
 	$wp_customize->add_setting( 'kaingang_logo', array(
-		'capability'  => 'edit_theme_options'
+		'capability'  		=> 'edit_theme_options',
+		'sanitize_callback' => 'kaingang_callback_logo_size'
 	) );
 	
     $wp_customize->add_control( new My_Customize_Image_Reloaded_Control( $wp_customize, 'kaingang_logo', array(
@@ -149,6 +150,30 @@ function kaingang_customize_register( $wp_customize ) {
 
 }
 add_action( 'customize_register', 'kaingang_customize_register' );
+
+/**
+ * Get 'kaingang_logo' ID and use it to define the default logo size
+ * 
+ * @param  string $value The attachment guid, which is the full imagem URL
+ * @return string $value The new image size for 'quizumba_logo'
+ */
+function kaingang_callback_logo_size( $value ) {
+    global $wpdb;
+
+    if ( empty( $value ) )
+        return $value;
+
+    if ( ! is_numeric( $value ) ) {
+        $attachment_id = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM {$wpdb->posts} WHERE post_type = 'attachment' AND guid = %s ORDER BY post_date DESC LIMIT 1;", $value ) );
+        if ( ! is_wp_error( $attachment_id ) && wp_attachment_is_image( $attachment_id ) )
+            $value = $attachment_id;
+    }
+
+    $image_attributes = wp_get_attachment_image_src( $value, 'feature-archive--small' );
+    $value = $image_attributes[0];
+
+    return $value;
+}
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
