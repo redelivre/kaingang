@@ -28,7 +28,7 @@ get_header(); ?>
 					<ul class="entry-event">
 						<?php if ( $date_start = get_post_meta( $post->ID, '_data_inicial', true ) ) : ?>
 						<li class="event-date">
-							<span class="meta-title"><?php _e( 'Date', 'Agenda', 'kaingang' ); ?></span>
+							<span class="meta-title"><?php _ex( 'Date', 'Agenda', 'kaingang' ); ?></span>
 							<?php
 							$date_end = get_post_meta( $post->ID, '_data_final', true );
 							if ( $date_end && $date_end != $date_start ) :
@@ -46,15 +46,15 @@ get_header(); ?>
 						<?php endif; ?>
 						
 						<?php if ( $time = get_post_meta( $post->ID, '_horario', true ) ) : ?>
-						<li class="event-time"><span class="meta-title"><?php _e( 'Time', 'Agenda', 'kaingang' ); ?></span><?php echo $time; ?></li>
+						<li class="event-time"><span class="meta-title"><?php _ex( 'Time', 'Agenda', 'kaingang' ); ?></span><?php echo $time; ?></li>
 						<?php endif; ?>
 						
 						<?php if ( $location = get_post_meta( $post->ID, '_onde', true ) ) : ?>
-						<li class="event-location"><span class="meta-title"><?php _e( 'Location', 'Agenda', 'kaingang' ); ?></span><?php echo $location; ?></li>
+						<li class="event-location"><span class="meta-title"><?php _ex( 'Location', 'Agenda', 'kaingang' ); ?></span><?php echo $location; ?></li>
 						<?php endif; ?>
 						
 						<?php if ( $link = get_post_meta( $post->ID, '_link', true ) ) : ?>
-						<li class="event-link"><span class="meta-title"><?php _e( 'More info', 'Agenda', 'kaingang' ); ?></span><a href="<?php echo esc_url( $link ); ?>"><?php echo esc_url( $link ); ?></a></li>
+						<li class="event-link"><span class="meta-title"><?php _ex( 'More info', 'Agenda', 'kaingang' ); ?></span><a href="<?php echo esc_url( $link ); ?>"><?php echo esc_url( $link ); ?></a></li>
 						<?php endif; ?>
 					</ul>
 					<?php the_content(); ?>
