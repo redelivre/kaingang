@@ -282,10 +282,26 @@ add_action( 'wp_head', 'kaingang_customize_css' );
  */
 function kaingang_admin_customizer_menu_link() {
 
-	global $menu;
+	global $menu, $submenu;
 
-    if ( current_user_can( 'edit_theme_options' ) ) {
-        add_theme_page( __( 'Customize', 'default' ), __( 'Customize', 'default' ), 'edit_theme_options', 'customize.php' );
+    // Check if a Customize menu already exists
+    $handle = 'customize.php';
+    $customizer_menu = false;
+
+    if( empty( $submenu ) ) {
+      return;
+    }
+
+    foreach( $submenu as $k => $item ) {
+        foreach( $item as $sm ) {
+	        if( $handle == $sm[2] ) {
+	            $customizer_menu = true;
+			}
+        }
+    }
+    
+    if ( $customizer_menu === false && current_user_can( 'edit_theme_options' ) ) {
+        add_theme_page( __( 'Customizewew', 'default' ), __( 'Customizeew', 'default' ), 'edit_theme_options', 'customize.php' );
     }
 
 }
