@@ -559,7 +559,7 @@ a:active {
 }
 
 .main-navigation li {
-	float: left;
+	display: inline-block;
 	position: relative;
 }
 
@@ -595,6 +595,11 @@ a:active {
 }
 .main-navigation ul ul a:hover {
 }
+
+.main-navigation ul li {
+	text-align: left;
+}
+
 .main-navigation ul li:hover > ul {
 	display: block;
 }
@@ -1122,6 +1127,10 @@ object {
 			bottom: 0;
 			right: 0;
 		width: 66%;
+	}
+
+	.main-navigation  ul {
+		text-align: right;
 	}
 
     .content-area {
