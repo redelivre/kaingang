@@ -256,6 +256,18 @@ function kaingang_customize_css() {
 	        a:visited {
 	        	color: <?php echo $link_color; ?>;
 	        }
+	        a:hover,
+			a:focus,
+			a:active {
+				color: #959595;
+			}
+
+			button,
+			html input[type="button"],
+			input[type="reset"],
+			input[type="submit"] {
+				background-color: <?php echo $link_color; ?>;
+			}
         <?php endif; ?>
 	</style> 
 	<!-- /Customizer options -->

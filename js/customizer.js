@@ -23,6 +23,7 @@
 	wp.customize( 'kaingang_link_color', function( value ) {
         value.bind( function( to ) {
             $( 'a' ).css( 'color', to );
+            $( 'button, input[type="button"], input[type="reset"], input[type="submit"]' ).css( 'background', to );
         } );
     } );
 
