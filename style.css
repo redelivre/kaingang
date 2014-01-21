@@ -279,6 +279,11 @@ input[type="submit"] {
 	color: #fff;
 	font-size: 0.875em;
 	padding: 0.5em 1em;
+
+	-webkit-transition: background-color 0.25s ease-out;
+    -moz-transition: background-color 0.25s ease-out;
+    -o-transition: background-color 0.25s ease-out;
+    transition: background-color 0.25s ease-out;
 }
 
 button:hover,
@@ -855,6 +860,24 @@ a:active {
 
 .media .entry-image {
 	margin-bottom: 1em;
+	overflow: hidden;
+}
+
+.media .entry-image a .wp-post-image,
+.entry-image--event a .wp-post-image {
+	-webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
+.media .entry-image a:hover .wp-post-image,
+.entry-image--event a:hover .wp-post-image {
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 .page-content img.wp-smiley,
@@ -1016,6 +1039,7 @@ object {
 .entry-image--event {
 	float: none;
 	margin: 0 -0.75em 0.75em -0.75em;
+	overflow: hidden;
 }
 
 .entry-event {
