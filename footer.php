@@ -20,11 +20,13 @@
 
 			<div class="site-info">
 				<?php do_action( 'kaingang_credits' ); ?>
-				<?php if ( $footer_text = get_theme_mod( 'kaingang_footer_text' ) ) : ?>
-					<div class="site-text">
-						<?php echo get_theme_mod( 'kaingang_footer_text' ); ?>
-					</div>
-				<?php endif; ?>
+				<div class="site-text">
+					<?php 
+					if ( $footer_text = get_theme_mod( 'kaingang_footer_text' ) ) {
+						echo get_theme_mod( 'kaingang_footer_text' );
+					}
+					?>
+				</div>
 				<div class="site-credits">
 					<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'kaingang' ), 'WordPress' ); ?></a>
 				</div><!-- .site-credits -->

@@ -68,6 +68,7 @@ function kaingang_customize_register( $wp_customize ) {
 	// Site title & tagline
 	$wp_customize->add_setting( 'kaingang_display_header_text', array(
 		'capability' => 'edit_theme_options',
+		'transport'	 => 'postMessage'
 	) );
 
 	$wp_customize->add_control( 'kaingang_display_header_text', array(
@@ -152,8 +153,9 @@ function kaingang_customize_register( $wp_customize ) {
 	
 	// Footer section: footer text
 	$wp_customize->add_setting( 'kaingang_footer_text', array(
-		'default'    => get_option( 'name' ),
+		'default'    	=> get_option( 'name' ),
 		'capability'  	=> 'edit_theme_options',
+		'transport' 	=> 'postMessage'
 	) );
 
     $wp_customize->add_control( 'kaingang_footer_text', array(
@@ -165,8 +167,6 @@ function kaingang_customize_register( $wp_customize ) {
 	// Add postMessage support for site title and description for the Theme Customizer.
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'kaingang_footer_text' )->transport = 'postMessage';
-	$wp_customize->get_setting( 'kaingang_display_header_text' )->transport = 'postMessage';
 	
 
 }

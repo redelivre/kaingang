@@ -5,6 +5,7 @@
  */
 
 ( function( $ ) {
+
 	// Site title
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( to ) {
@@ -18,6 +19,23 @@
 			$( '.site-description' ).text( to );
 		} );
 	} );
+
+    // Display header text
+    wp.customize( 'kaingang_display_header_text', function( value ) {
+        value.bind( function( to ) {
+            if ( false === to ) {
+                $( '.site-title, .site-description' ).css( {
+                    'clip': 'rect(1px, 1px, 1px, 1px)',
+                    'position': 'absolute'
+                } );
+            } else {
+                $( '.site-title, .site-description' ).css( {
+                    'clip': 'auto',
+                    'position': 'relative'
+                } );
+            }
+        } );
+    } );
 
 	// Link color
 	wp.customize( 'kaingang_link_color', function( value ) {
@@ -61,4 +79,5 @@
 			$( '.site-text' ).text( to );
 		} );
 	} );
+
 } )( jQuery );
