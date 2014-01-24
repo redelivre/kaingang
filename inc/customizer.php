@@ -220,7 +220,8 @@ function kaingang_customize_css() {
 		$color_scheme = get_theme_mod( 'kaingang_color_scheme' );
 		if ( isset( $color_scheme ) && $color_scheme == 'dark' ) : ?>
 			.site-header,
-			.site-footer {
+			.site-footer,
+			.extra-bar {
 				background-color: #000;
 				color: #fff;
 			}

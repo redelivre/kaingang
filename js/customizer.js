@@ -62,12 +62,12 @@
     wp.customize( 'kaingang_color_scheme', function( value ) {
         value.bind( function( to ) {
             if ( to == 'light' ) {
-                $( '.site-header, .site-footer' ).css( 'background-color', '#fff' );
-                $( '.site-description, .site-footer' ).css( 'color', '#000' );
+                $( '.site-header, .site-footer, .extra-bar' ).css( 'background-color', '#fff' );
+                $( '.site-description, .site-footer, .extra-bar' ).css( 'color', '#000' );
             }
             else {
-                $( '.site-header, .site-footer' ).css( 'background-color', '#000' );
-                $( '.site-description, .site-footer' ).css( 'color', '#fff' );
+                $( '.site-header, .site-footer, .extra-bar' ).css( 'background-color', '#000' );
+                $( '.site-description, .site-footer, .extra-bar' ).css( 'color', '#fff' );
                 $( '.widget-area--footer + .site-info' ).css( 'border-color', '#222' );
             }
         } );
