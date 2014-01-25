@@ -427,6 +427,8 @@ a:active {
 .icon-facebook-page:before { content: '\e800'; }
 .icon-google:before { content: '\e801'; }
 .icon-tumblr:before { content: '\e802'; }
+.icon-flickr:before { content: '\e808'; }
+
 
 /* Text meant only for screen readers */
 .screen-reader-text {
@@ -707,6 +709,10 @@ a:active {
 
 .social-link:hover .icon-youtube {
 	background: #bb0000;
+}
+
+.social-link:hover .icon-flickr {
+	background: #ff0084;
 }
 
 .social-link:hover .icon-rss {
