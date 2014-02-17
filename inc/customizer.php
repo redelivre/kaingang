@@ -302,7 +302,7 @@ function kaingang_admin_customizer_menu_link() {
     }
     
     if ( $customizer_menu === false && current_user_can( 'edit_theme_options' ) ) {
-        add_theme_page( __( 'Customizewew', 'default' ), __( 'Customizeew', 'default' ), 'edit_theme_options', 'customize.php' );
+        add_theme_page( __( 'Customize', 'default' ), __( 'Customize', 'default' ), 'edit_theme_options', 'customize.php' );
     }
 
 }
