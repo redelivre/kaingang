@@ -168,6 +168,38 @@ function kaingang_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	
+	/**
+	* Add options for header customization
+	* @author: Henrique M.
+	* @todo: Need to review language files, currently only display in portuguese.
+	*/
+	$wp_customize->add_section('kaigang_header', array(
+		'title' => __('Cabeçalho', 'kaigang'),
+		'priority' => 5
+	));
+	
+	//header background color
+	$wp_customize->add_setting('kaigang_header_bgbolor', array(
+		'default' => ''
+	));
+	
+	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'kaigang_header_bgcolor_control', array(
+		'label' => __('Cor de fundo', 'kaigang'),
+		'section' => 'kaigang_header',
+		'settings' => 'kaigang_header_bgbolor'
+	)));
+	
+	//header background image
+	$wp_customize->add_setting('kaigang_header_image', array(
+		'default' => ''
+	));
+	
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'kaigang_header_image_control', array(
+		'label' => __('Imagem de fundo', 'kaigang'),
+		'section' => 'kaigang_header',
+		'settings' => 'kaigang_header_image'
+	)));
+	
 
 }
 add_action( 'customize_register', 'kaingang_customize_register' );

@@ -21,7 +21,12 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
-	<header id="masthead" class="site-header" role="banner">
+	<?php
+		$header_bg_image = get_theme_mod('kaigang_header_image'); 
+		$header_bg_color = get_theme_mod('kaigang_header_bgbolor');
+	?>
+	
+	<header id="masthead" class="site-header" role="banner" style="background: <?php echo $header_bg_color; echo ($header_bg_image) ? " url('{$header_bg_image}')" : ''; ?> no-repeat;">
 		<div class="wrap clear">
 			<div class="site-branding">
 				<?php
