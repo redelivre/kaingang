@@ -1191,7 +1191,7 @@ object {
 		width: 100%;
 	}
 
-	.header-type-2  .main-navigation {
+	.header-type-2 .main-navigation {
 		width: 100%;
 	}
 
@@ -1203,7 +1203,20 @@ object {
 	.header-type-2 .main-navigation ul li {
 		margin: 0 16px 0 0;
 	}
+	
+	.header-type-2 .main-navigation ul li ul {
+		display:none;
+	}
+	
+	.header-type-2 .main-navigation ul li ul li {
+		margin: 0;
+		padding: 0;
+	}
 
+	.header-type-2 .main-navigation ul li:hover ul {
+		display:block;
+	}
+	
     .content-area {
     	float: left;
 		width: 64%;
