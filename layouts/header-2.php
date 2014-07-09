@@ -1,7 +1,7 @@
 	<header id="masthead" class="site-header" role="banner" style="background: <?php echo get_theme_mod('kaingang_header_bgcolor'); ?>">
 		<div class="wrap clear">
 			<div class="site-branding">
-				<a href="<?php home_url(); ?>">
+				<a href="<?php echo home_url(); ?>">
 					<img src="<?php echo get_theme_mod('kaingang_header_image'); ?>" alt="" />
 				</a>
 			</div>
