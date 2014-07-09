@@ -38,9 +38,6 @@
 		}
 	?>
 
-
-
-
 <body <?php body_class($header_class); ?>>
 
 <div id="page" class="hfeed site">

@@ -1,4 +1,8 @@
-<header id="masthead" class="site-header" role="banner" style="background: <?php echo $header_bg_color; echo ($header_bg_image) ? " url('{$header_bg_image}')" : ''; ?> no-repeat;">
+	<?php
+	$header_bg_image = get_theme_mod('kaingang_header_image'); 
+	$header_bg_color = get_theme_mod('kaingang_header_bgcolor');
+	?>
+	<header id="masthead" class="site-header" role="banner" style="background: <?php echo $header_bg_color; echo ($header_bg_image) ? " url('{$header_bg_image}')" : ''; ?> no-repeat;">
 		<div class="wrap clear">
 			<div class="site-branding">
 				<?php
