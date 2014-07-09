@@ -17,7 +17,6 @@
 
 	<?php wp_head(); ?>
 	<?php $kaingang_fonts = get_theme_mod('kaingang_font_main'); ?>
-	<link href='http://fonts.googleapis.com/css?family=<?php echo $kaingang_fonts['url']; ?>' rel='stylesheet' type='text/css'>
 	<style>
 		body{
 			font-family: '<?php echo $kaingang_fonts['name']; ?>';
@@ -25,18 +24,7 @@
 	</style>
 </head>
 
-<?php
-		$header_type = get_theme_mod('kaingang_header_type');
-		$header_bg_image = get_theme_mod('kaingang_header_image'); 
-		$header_bg_color = get_theme_mod('kaingang_header_bgbolor');
-		if($header_type == 2){
-			$header_class = "header-type-2";
-			get_template_part('layouts/header', '2');
-		} else {
-			$header_class = "header-type-1";
-			get_template_part('layouts/header', '1');
-		}
-	?>
+<?php $header_class = kaingang_load_header(); ?>
 
 <body <?php body_class($header_class); ?>>
 

@@ -121,7 +121,8 @@ function kaingang_scripts() {
 	wp_enqueue_style( 'kaingang-style', get_stylesheet_uri() );
 
 	// Google Fonts
-	wp_register_style( 'kaingang-fonts', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic' );
+	$kaingang_fonts = get_theme_mod('kaingang_font_main');
+	wp_register_style( 'kaingang-fonts', "http://fonts.googleapis.com/css?family={$kaingang_fonts['url']}" );
 	wp_enqueue_style ( 'kaingang-fonts' );
 
 	// FlexSlider
@@ -189,3 +190,21 @@ function kaingang_footer_scripts() {
 	<?php
 }
 add_action( 'wp_footer', 'kaingang_footer_scripts' );
+
+/**
+* Load the header type defined in wordpress customizer
+* @author Henrique
+*
+*/
+function kaingang_load_header(){
+	$header_type = get_theme_mod('kaingang_header_type');
+	if($header_type == 2){
+		$header_class = "header-type-2";
+		get_template_part('layouts/header', '2');
+	} else {
+		$header_class = "header-type-1";
+		get_template_part('layouts/header', '1');
+	}
+	
+	return $header_class;
+}
