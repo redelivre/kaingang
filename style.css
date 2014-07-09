@@ -1157,20 +1157,51 @@ object {
 		clear: both;
 	}
 
-	.site-branding {
+	/**
+	* Header type 1
+	*/
+	.header-type-1 .site-branding {
 		float: left;
 		width: 34%;
 	}
 
-	.main-navigation {
+	.header-type-1  .main-navigation {
 		position: absolute;
 			bottom: 0;
 			right: 0;
 		width: 66%;
 	}
 
-	.main-navigation  ul {
+	.header-type-1 .main-navigation  ul {
 		text-align: right;
+	}
+	
+	.header-type-1 .main-navigation  ul li {
+		margin: 0 16px 0 0;
+	}
+	
+	.header-type-1 .main-navigation  ul li:last-child {
+		margin-right: 0;
+	}	
+	
+	/**
+	* Header type 2
+	*/
+	.header-type-2 .site-branding {
+		width: 100%;
+	}
+
+	.header-type-2  .main-navigation {
+		width: 100%;
+	}
+
+	.header-type-2 .main-navigation  ul {
+		display: table;
+		margin: 0 auto;
+	}
+	
+	.header-type-2 .main-navigation ul li {
+		margin: 0 16px 0 0;
 	}
 
     .content-area {

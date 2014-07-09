@@ -173,32 +173,48 @@ function kaingang_customize_register( $wp_customize ) {
 	* @author: Henrique M.
 	* @todo: Need to review language files, currently only display in portuguese.
 	*/
-	$wp_customize->add_section('kaigang_header', array(
-		'title' => __('Cabeçalho', 'kaigang'),
+	$wp_customize->add_section('kaingang_header', array(
+		'title' => __('Cabeçalho', 'kaingang'),
 		'priority' => 5
 	));
 	
-	//header background color
-	$wp_customize->add_setting('kaigang_header_bgbolor', array(
+	//header background color	
+	$wp_customize->add_setting('kaingang_header_bgcolor', array(
 		'default' => ''
 	));
 	
-	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'kaigang_header_bgcolor_control', array(
-		'label' => __('Cor de fundo', 'kaigang'),
-		'section' => 'kaigang_header',
-		'settings' => 'kaigang_header_bgbolor'
+	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'kaingang_header_bgcolor_control', array(
+		'label' => __('Cor de fundo', 'kaingang'),
+		'section' => 'kaingang_header',
+		'settings' => 'kaingang_header_bgcolor'
 	)));
 	
 	//header background image
-	$wp_customize->add_setting('kaigang_header_image', array(
+	$wp_customize->add_setting('kaingang_header_image', array(
 		'default' => ''
 	));
 	
-	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'kaigang_header_image_control', array(
-		'label' => __('Imagem de fundo', 'kaigang'),
-		'section' => 'kaigang_header',
-		'settings' => 'kaigang_header_image'
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'kaingang_header_image_control', array(
+		'label' => __('Imagem de fundo', 'kaingang'),
+		'section' => 'kaingang_header',
+		'settings' => 'kaingang_header_image'
 	)));
+	
+	// header options
+	$wp_customize->add_setting('kaingang_header_type', array(
+		'default' => '1'
+	));
+	
+	$wp_customize->add_control('header_style', array(
+		'label' => __('Estrutura', 'kaingang'),
+		'section' => 'kaingang_header',
+		'settings' => 'kaingang_header_type',
+		'type' => 'radio',
+		'choices' => array(
+				'1' => 'Menu ao lado do logo',
+				'2' => 'Menu abaixo da imagem do cabeçalho'
+			)
+	));
 	
 
 }

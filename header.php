@@ -18,38 +18,25 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<?php
+		$header_type = get_theme_mod('kaingang_header_type');
+		$header_bg_image = get_theme_mod('kaingang_header_image'); 
+		$header_bg_color = get_theme_mod('kaingang_header_bgbolor');
+		if($header_type == 2){
+			$header_class = "header-type-2";
+			get_template_part('layouts/header', '2');
+		} else {
+			$header_class = "header-type-1";
+			get_template_part('layouts/header', '1');
+		}
+	?>
+
+
+
+
+<body <?php body_class($header_class); ?>>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
-	<?php
-		$header_bg_image = get_theme_mod('kaigang_header_image'); 
-		$header_bg_color = get_theme_mod('kaigang_header_bgbolor');
-	?>
-	
-	<header id="masthead" class="site-header" role="banner" style="background: <?php echo $header_bg_color; echo ($header_bg_image) ? " url('{$header_bg_image}')" : ''; ?> no-repeat;">
-		<div class="wrap clear">
-			<div class="site-branding">
-				<?php
-				// Check if there's a custom logo
-                $logo = get_theme_mod( 'kaingang_logo' );
-                if ( isset( $logo ) && ! empty( $logo ) ) : ?>
-	                <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-	                    <img class="site-logo" src="<?php echo $logo; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
-	                </a>
-            	<?php endif; ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</div>
-
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<h1 class="menu-toggle"><span class="icon-menu"><?php _e( 'Menu', 'kaingang' ); ?></span></h1>
-				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'kaingang' ); ?></a>
-
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- .main-navigation -->
-		</div><!-- .wrap -->
-	</header><!-- .site-header -->
-
 	<?php if ( is_home() ) : ?>
 		<div class="feature flexslider js-flexslider">
 			<?php
