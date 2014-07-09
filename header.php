@@ -16,6 +16,13 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 	<?php wp_head(); ?>
+	<?php $kaingang_fonts = get_theme_mod('kaingang_font_main'); ?>
+	<link href='http://fonts.googleapis.com/css?family=<?php echo $kaingang_fonts['url']; ?>' rel='stylesheet' type='text/css'>
+	<style>
+		body{
+			font-family: '<?php echo $kaingang_fonts['name']; ?>';
+		}
+	</style>
 </head>
 
 <?php
@@ -35,6 +42,7 @@
 
 
 <body <?php body_class($header_class); ?>>
+
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<?php if ( is_home() ) : ?>

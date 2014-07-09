@@ -216,9 +216,56 @@ function kaingang_customize_register( $wp_customize ) {
 			)
 	));
 	
+	//Typography
+	$wp_customize->add_section( 'kaingang_typography', array(
+		'title'    => __( 'Typography (beta)', 'guarani' ),
+		'priority' => 30,
+	) );
+   
+    $wp_customize->add_setting( 'kaingang_font_main', array(
+      'sanitize_callback' => 'kaingang_font_values'
+    ) );
+
+    $wp_customize->add_control( 'kaingang_font_main', array(
+        'label'    => __( 'Main Font', 'kaingang' ),
+        'section'  => 'kaingang_typography',
+        'type'     => 'select',
+        'choices'  => array(
+        	'default' 				=> __( 'Default', 'kaingang' ),
+        	'Amaranth:400,700' 		=> __( 'Amaranth', 'kaingang' ),
+        	'Arvo:400,700,400' 		=> __( 'Arvo', 'kaingang' ),
+        	'Lato:400,700' 			=> __( 'Lato', 'kaingang' ),
+        	'Noticia+Text:400,700' 	=> __( 'Noticia Text', 'kaingang' ),
+        	'Special+Elite:400' 	=> __( 'Special Elite', 'kaingang' )
+ 		),
+        'priority' => 5,
+        'setting' => 'kaingang_font_main'
+    ) );
+
 
 }
 add_action( 'customize_register', 'kaingang_customize_register' );
+
+function kaingang_font_values( $value ) {
+
+    if ( $value == 'default' || is_array( $value ) )
+    	return $value;
+
+    // Font URL
+    $new_value['url'] = $value;
+
+	// Name
+	$font_string = strstr( $value, ':', true );
+    $new_value['name'] = str_replace( '+', ' ', $font_string );
+
+    // Font weight
+    $new_value['weight'] = strstr( $value, ':' );
+
+    $value = $new_value;
+
+    return $value;
+}
+
 
 /**
  * Get 'kaingang_logo' ID and use it to define the default logo size
