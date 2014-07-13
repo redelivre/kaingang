@@ -32,7 +32,7 @@
     },
     {
       "uid": "13b11ab72c6ae9c97ee12428e17f3a4e",
-      "css": "dot-2",
+      "css": "flicker",
       "code": 59400,
       "src": "entypo"
     },
@@ -58,6 +58,12 @@
       "uid": "d491462e64eb5b8c4f064108a2ff1780",
       "css": "tumblr",
       "code": 59394,
+      "src": "entypo"
+    },
+    {
+      "uid": "0fbfb1cd7a847c88ea4c141d0e1bbdb5",
+      "css": "instagram",
+      "code": 59401,
       "src": "entypo"
     }
   ]
