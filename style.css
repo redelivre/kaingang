@@ -429,6 +429,7 @@ a:active {
 .icon-tumblr:before { content: '\e802'; }
 .icon-flickr:before { content: '\e808'; }
 .icon-instagram:before { content: '\e809'; }
+.icon-pinterest:before { content: '\e80b'; }
 
 
 /* Text meant only for screen readers */
@@ -718,6 +719,10 @@ a:active {
 
 .social-link:hover .icon-instagram {
 	background: #3f729b;
+}
+
+.social-link:hover .icon-pinterest {
+	background: #cb2027;
 }
 
 .social-link:hover .icon-rss {

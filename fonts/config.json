@@ -50,7 +50,7 @@
     },
     {
       "uid": "b945f4ac2439565661e8e4878e35d379",
-      "css": "gplus",
+      "css": "google",
       "code": 59393,
       "src": "entypo"
     },
@@ -65,6 +65,12 @@
       "css": "instagram",
       "code": 59401,
       "src": "entypo"
+    },
+    {
+      "uid": "178c8af85364e12fe70b959c7c055bc6",
+      "css": "pinterest",
+      "code": 59403,
+      "src": "typicons"
     }
   ]
 }
