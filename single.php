@@ -69,9 +69,12 @@ get_header(); ?>
 				// If comments are open or we have at least one comment, load up the comment template
 				if ( comments_open() || '0' != get_comments_number() )
 					comments_template();
-			?>
 
-		<?php endwhile; // end of the loop. ?>
+			if( get_theme_mod('quizumba_display_fb_comments') == 1 )
+				{ ?> 
+				<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-numposts="5" data-colorscheme="light" data-width="100%"></div>
+			<?php }	
+		endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

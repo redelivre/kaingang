@@ -44,8 +44,13 @@ get_header(); ?>
 					</footer>
 					
 				</article><!-- #post-## -->
-
-			<?php endwhile; // end of the loop. ?>
+			<?php 
+			if( get_theme_mod('kaingang_display_fb_comments') == 1 )
+				{ ?> 
+				<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-numposts="5" data-colorscheme="light" data-width="100%"></div>
+			<?php }	
+			
+			endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
