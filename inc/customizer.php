@@ -241,6 +241,22 @@ function kaingang_customize_register( $wp_customize ) {
         'priority' => 5,
         'setting' => 'kaingang_font_main'
     ) );
+    
+    // Comments FB
+    $wp_customize->add_section( 'kaingang_fb_comments', array(
+    		'title'    => __( 'Comentários via Facebook', 'kaingang' ),
+    		'priority' => 30,
+    ) );
+    $wp_customize->add_setting( 'kaingang_display_fb_comments', array(
+    		'capability' => 'edit_theme_options',
+    ) );
+    
+    $wp_customize->add_control( 'kaingang_display_fb_comments', array(
+    		'label'    => __( 'Exibe a caixa de comentários do Facebook', 'kaingang' ),
+    		'section'  => 'kaingang_fb_comments',
+    		'type'     => 'checkbox',
+    		'settings' => 'kaingang_display_fb_comments'
+    ) );
 
 
 }
@@ -271,7 +287,7 @@ function kaingang_font_values( $value ) {
  * Get 'kaingang_logo' ID and use it to define the default logo size
  * 
  * @param  string $value The attachment guid, which is the full imagem URL
- * @return string $value The new image size for 'quizumba_logo'
+ * @return string $value The new image size for 'kaingang_logo'
  */
 function kaingang_callback_logo_size( $value ) {
     global $wpdb;
