@@ -70,7 +70,7 @@ get_header(); ?>
 				if ( comments_open() || '0' != get_comments_number() )
 					comments_template();
 
-			if( get_theme_mod('quizumba_display_fb_comments') == 1 )
+			if( get_theme_mod('kaingang_display_fb_comments') == 1 )
 				{ ?> 
 				<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-numposts="5" data-colorscheme="light" data-width="100%"></div>
 			<?php }	
