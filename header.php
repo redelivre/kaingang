@@ -39,9 +39,12 @@
 		        <div class="flexslider-slides">
 			        <?php while ( $featured_posts->have_posts() ) : $featured_posts->the_post(); ?>
 			        	<div class="flexslider-slide-wrapper">
-			        		<?php if ( has_post_thumbnail() ) : ?>
-			        		<?php the_post_thumbnail( 'feature-main', array( 'class' => 'flexslider-image' ) ); ?>
-				        	<?php endif; ?>
+			        		<?php
+			        		// Gets the selected aspect ratio chosen on Customizer
+			        		if ( has_post_thumbnail() ) :
+			        			the_post_thumbnail( get_theme_mod( 'kaingang_feature_thumbnail_size' ), array( 'class' => 'flexslider-image' ) );
+				        	endif;
+				        	?>
 				        	<div class="wrap">
 					        	<article <?php post_class(); ?>>
 					        		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>

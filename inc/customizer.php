@@ -145,6 +145,29 @@ function kaingang_customize_register( $wp_customize ) {
 	    'settings' => 'kaingang_color_scheme'
 	) );
 
+	// Feature section
+	$wp_customize->add_section( 'kaingang_feature', array(
+		'title'    => __( 'Destaque', 'kaingang' ),
+		'priority' => 60,
+	) );
+
+	$wp_customize->add_setting( 'kaingang_feature_thumbnail_size', array(
+	    'default'    => 'feature-main--4x3',
+	) );
+
+	$wp_customize->add_control( 'kaingang_feature_thumbnail_size', array(
+	    'label'    => __( 'Proporção da foto', 'kaingang' ),
+	    'section'  => 'kaingang_feature',
+	    'type'     => 'radio',
+	    'choices'  => array(
+	    				'feature-main--3x2' => __( '3:2', 'kaingang' ),
+	    				'feature-main--4x3' => __( '4:3', 'kaingang' ),
+	    				'feature-main--16x9' => __( '16:9', 'kaingang' )
+	    			),
+	    'priority' => 5,
+	    'settings' => 'kaingang_feature_thumbnail_size'
+	) );
+
 	// Footer section
 	$wp_customize->add_section( 'kaingang_footer', array(
 		'title'    => __( 'Footer', 'kaingang' ),
