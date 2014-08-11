@@ -152,7 +152,7 @@ function kaingang_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'kaingang_feature_thumbnail_size', array(
-	    'default'    => 'feature-main--4x3',
+	    'default'    => 'feature-main',
 	) );
 
 	$wp_customize->add_control( 'kaingang_feature_thumbnail_size', array(
@@ -160,9 +160,10 @@ function kaingang_customize_register( $wp_customize ) {
 	    'section'  => 'kaingang_feature',
 	    'type'     => 'radio',
 	    'choices'  => array(
-	    				'feature-main--3x2' => __( '3:2', 'kaingang' ),
-	    				'feature-main--4x3' => __( '4:3', 'kaingang' ),
-	    				'feature-main--16x9' => __( '16:9', 'kaingang' )
+	    				'feature-main'			=> __( 'Padrão', 'kaingang' ),
+	    				'feature-main--3x2' 	=> __( '3:2', 'kaingang' ),
+	    				'feature-main--4x3' 	=> __( '4:3', 'kaingang' ),
+	    				'feature-main--16x9'	=> __( '16:9', 'kaingang' )
 	    			),
 	    'priority' => 5,
 	    'settings' => 'kaingang_feature_thumbnail_size'
