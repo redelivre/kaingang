@@ -168,7 +168,7 @@ endif;
 
 if ( ! function_exists( 'kaingang_posted_on' ) ) :
 /**
- * Prints HTML with meta information for the current post-date/time and author.
+ * Prints HTML with meta information for the current post-date/time and first category.
  */
 function kaingang_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -182,12 +182,22 @@ function kaingang_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<span class="posted-on">Posted on %s</span>', 'kaingang' ),
-		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
-			esc_url( get_permalink() ),
+	$category = get_the_category();
+
+	if ( $category ) {
+		$category_string = '<a href="' . get_category_link( $category[0]->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category[0]->name ) . '" ' . '>' . $category[0]->name.'</a>';
+
+		printf( '%1$s <span class="sep">&middot;</span> %2$s',
+			$time_string,
+			$category_string
+		);
+	}
+	else {
+		printf( '%1$s',
 			$time_string
-		)
-	);
+		);
+	}
+	 
 }
 endif;
 
