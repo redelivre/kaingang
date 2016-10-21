@@ -97,6 +97,10 @@
 				</div>
 			</div><?php 
 		}
+		else 
+		{?>
+			<div class="extra-bar-space"></div><?php
+		}
 	endif; // is_home() ?>
 
 	<div id="content" class="site-content wrap">
