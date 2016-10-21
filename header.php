@@ -58,30 +58,45 @@
 			    </div><!-- .flexslider-slides -->
 			<?php endif; ?>
 		</div><!-- .feature -->
-	
-		<div class="extra-bar box clear">
-			<div class="wrap">
-				<?php
-				$social = get_option( 'campanha_social_networks' );
-				if ( isset( $social ) && ! empty ( $social ) ) : ?>
-					<div class="social-networks">
-						<h6><?php _e( 'Find us', 'kaingang' ); ?></h6>
-						<?php
-						foreach ( $social as $key => $value ) :
-							if ( ! empty( $value) ) : ?>
-								<a class="social-link" href="<?php echo esc_url( $value ); ?>"><span class="icon icon-<?php echo $key; ?>"></span></a>
-							<?php
-							endif;
-						endforeach;
+		
+		<?php
+		$display_search = get_theme_mod('kaingang_display_search', '1') == 1;
+		$display_social = get_theme_mod('kaingang_social_display_icons', '1') == 1;
+		if($display_search || $display_social)
+		{
+			?>
+			<div class="extra-bar box clear">
+				<div class="wrap">
+					<?php
+					if($display_social)
+					{
+						$social = get_option( 'campanha_social_networks' );
+						if ( isset( $social ) && ! empty ( $social ) && is_array($social) && count($social) > 0 ) : ?>
+							<div class="social-networks">
+								<h6><?php _e( 'Find us', 'kaingang' ); ?></h6>
+								<?php
+								foreach ( $social as $key => $value ) :
+									if ( ! empty( $value) ) : ?>
+										<a class="social-link" href="<?php echo esc_url( $value ); ?>"><span class="icon icon-<?php echo $key; ?>"></span></a>
+									<?php
+									endif;
+								endforeach;
+								?>
+							</div><!-- .social networks -->
+						<?php endif;
+					}
+					if($display_search)
+					{
 						?>
-					</div><!-- .social networks -->
-				<?php endif; ?>
-				<div class="search-form-wrapper">
-					<h6><?php _e( 'Search for:', 'kaingang' ); ?></h6>
-					<?php get_search_form(); ?>
+						<div class="search-form-wrapper">
+							<h6><?php _e( 'Search for:', 'kaingang' ); ?></h6>
+							<?php get_search_form(); ?>
+						</div><?php
+					}
+					?>
 				</div>
-			</div>
-		</div>
-	<?php endif; // is_home() ?>
+			</div><?php 
+		}
+	endif; // is_home() ?>
 
 	<div id="content" class="site-content wrap">

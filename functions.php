@@ -125,9 +125,13 @@ function kaingang_scripts() {
 	wp_enqueue_style( 'kaingang-style', get_stylesheet_uri() );
 
 	// Google Fonts
-	$kaingang_fonts = get_theme_mod('kaingang_font_main');
-	wp_register_style( 'kaingang-fonts', "http://fonts.googleapis.com/css?family={$kaingang_fonts['url']}" );
-	wp_enqueue_style ( 'kaingang-fonts' );
+	$kaingang_fonts = get_theme_mod('kaingang_font_main', array());
+	
+	if(is_array($kaingang_fonts) && array_key_exists('url', $kaingang_fonts))
+	{
+		wp_register_style( 'kaingang-fonts', "http://fonts.googleapis.com/css?family={$kaingang_fonts['url']}" );
+		wp_enqueue_style ( 'kaingang-fonts' );
+	}
 
 	// FlexSlider
 	wp_register_style( 'kaingang-flexslider', get_template_directory_uri() . '/css/flexslider.css', array() );

@@ -281,8 +281,31 @@ function kaingang_customize_register( $wp_customize ) {
     		'type'     => 'checkbox',
     		'settings' => 'kaingang_display_fb_comments'
     ) );
+    
+    $wp_customize->add_setting( 'kaingang_social_display_icons', array(
+    	'capability' => 'edit_theme_options',
+    	'default' => 1
+    ) );
+    
+    $wp_customize->add_control( 'kaingang_social_display_icons', array(
+    	'label'    => __( 'Exibe icones das redes sociais internos do Kaingang', 'kaingang' ),
+    	'section'  => 'kaingang_header',
+    	'type'     => 'checkbox',
+    	'settings' => 'kaingang_social_display_icons',
+    ) );
 
-
+    $wp_customize->add_setting( 'kaingang_display_search', array(
+    	'capability' => 'edit_theme_options',
+    	'default' => 1
+    ) );
+    
+    $wp_customize->add_control( 'kaingang_display_search', array(
+    	'label'    => __( 'Exibe área de busca no cabeçalho', 'kaingang' ),
+    	'section'  => 'kaingang_header',
+    	'type'     => 'checkbox',
+    	'settings' => 'kaingang_display_search',
+    ) );
+    
 }
 add_action( 'customize_register', 'kaingang_customize_register' );
 
