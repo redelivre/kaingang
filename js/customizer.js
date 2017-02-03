@@ -79,5 +79,19 @@
 			$( '.site-text' ).text( to );
 		} );
 	} );
+	
+	// Footer text
+	wp.customize( 'kaingang_footer_credits_text', function( value ) {
+		value.bind( function( to ) {
+			$('.site-credits a').text( to );
+		} );
+	} );
+	
+	// Footer text
+	wp.customize( 'kaingang_footer_credits_link', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-credits a' ).attr('href', to );
+		} );
+	} );
 
 } )( jQuery );

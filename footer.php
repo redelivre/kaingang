@@ -28,7 +28,14 @@
 					?>
 				</div>
 				<div class="site-credits">
-					<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'kaingang' ), 'WordPress' ); ?></a>
+					<?php
+					$footer_credits_text = get_theme_mod( 'kaingang_footer_credits_text', sprintf( __( 'Proudly powered by %s', 'kaingang' ), 'WordPress' ));
+					$footer_credits_link = get_theme_mod( 'kaingang_footer_credits_link', "http://wordpress.org/");
+					if ( !empty($footer_credits_text) && !empty($footer_credits_link) ) 
+					{?>
+						<a href="<?php echo $footer_credits_link; ?>" rel="generator"><?php echo $footer_credits_text; ?></a><?php
+					}
+					?>
 				</div><!-- .site-credits -->
 			</div><!-- .site-info -->
 		</div><!-- .wrap -->

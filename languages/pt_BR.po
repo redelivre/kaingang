@@ -2,381 +2,514 @@
 # This file is distributed under the same license as the Kaingang package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-01-18 17:24-0300\n"
+"Project-Id-Version: Kaingang\n"
+"POT-Creation-Date: 2017-02-03 00:57-0200\n"
+"PO-Revision-Date: 2017-02-03 01:00-0200\n"
+"Last-Translator: Jacson Passold <jacson@ethymos.com.br>\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: GlotPress/0.1\n"
-"Project-Id-Version: Kaingang\n"
-"POT-Creation-Date: \n"
-"Last-Translator: Eduardo Zulian <eduardozulian@gmail.com>\n"
-"Language-Team: \n"
-
-#: home.php:34
-#: inc/customizer.php:101
-msgid "Events"
-msgstr "Agenda"
-
-#: inc/customizer.php:112
-msgid "Display events list on Home"
-msgstr "Exibir agenda na capa"
-
-#: inc/customizer.php:276
-msgid "Customize"
-msgstr "Personalizar"
-
-#: inc/template-tags.php:260
-msgid "Share"
-msgstr "Compartilhe"
-
-#: inc/template-tags.php:261
-msgid "Share on Twitter"
-msgstr "Compartilhe no Twitter"
-
-#: inc/template-tags.php:262
-msgid "Share on Facebook"
-msgstr "Compartilhe no Facebook"
-
-#: inc/template-tags.php:263
-msgid "Share on Google+"
-msgstr "Compartilhe no Google+"
-
-#: inc/template-tags.php:267
-msgid "Link"
-msgstr "Link"
-
-#: inc/template-tags.php:267
-msgid "Click to copy the permalink"
-msgstr "Clique para copiar o permalink"
-
-#: single-agenda.php:31
-msgctxt "Agenda"
-msgid "Date"
-msgstr "Data"
-
-#: single-agenda.php:49
-msgctxt "Agenda"
-msgid "Time"
-msgstr "Horário"
-
-#: single-agenda.php:53
-msgctxt "Agenda"
-msgid "Location"
-msgstr "Local"
-
-#: single-agenda.php:57
-msgctxt "Agenda"
-msgid "More info"
-msgstr "Mais informações"
-
-#: single.php:57
-msgid "Categories"
-msgstr "Categorias"
-
-#: image.php:32
-#: image.php:64
-#: inc/template-tags.php:71
-#: inc/template-tags.php:90
-#: page.php:23
-#: single-agenda.php:18
-#: single.php:21
-msgid "Edit"
-msgstr "Editar"
-
-#: footer.php:29
-msgid "Proudly powered by %s"
-msgstr "Orgulhosamente criado com %s"
-
-#: functions.php:56
-msgid "Primary Menu"
-msgstr "Menu primário"
-
-#: functions.php:80
-msgid "Home Sidebar"
-msgstr "Barra lateral da capa"
-
-#: functions.php:82
-msgid "The main sidebar, displayed on the front page"
-msgstr "A barra lateral principal, exibida na capa do site"
-
-#: functions.php:90
-msgid "Internal Sidebar"
-msgstr "Barra lateral interna"
-
-#: functions.php:92
-msgid "The secondary sidebar, displayed internally"
-msgstr "A barra lateral secundária, exibida nas páginas internas"
-
-#: functions.php:100
-msgid "Footer Widget Area"
-msgstr "Área de widgets do rodapé"
-
-#: functions.php:102
-msgid "Appears on your footer"
-msgstr "É exibida no rodapé do site"
-
-#: header.php:40
-msgid "Menu"
-msgstr "Menu"
-
-#: header.php:41
-msgid "Skip to content"
-msgstr "Pular para o conteúdo"
-
-#: header.php:80
-msgid "Find us"
-msgstr "Encontre-nos"
-
-#: header.php:92
-msgid "Search for:"
-msgstr "Pesquise por:"
-
-#: image.php:22
-msgid "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s &times; %5$s</a> in <a href=\"%6$s\" rel=\"gallery\">%7$s</a>"
-msgstr "Publicado em <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s &times; %5$s</a> em <a href=\"%6$s\" rel=\"gallery\">%7$s</a>"
-
-#: image.php:37
-msgid "<span class=\"meta-nav\">&larr;</span> Previous"
-msgstr "<span class=\"meta-nav\">&larr;</span> Anterior"
-
-#: image.php:38
-msgid "Next <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Próximo <span class=\"meta-nav\">&rarr;</span>"
-
-#: inc/customizer.php:74
-msgid "Display header text"
-msgstr "Exibir texto do cabeçalho"
-
-#: inc/customizer.php:82
-msgid "Branding"
-msgstr "Marca"
-
-#: inc/customizer.php:93
-msgid "Logo"
-msgstr "Logo"
-
-#: inc/customizer.php:127
-msgid "Link Color"
-msgstr "Cor dos links"
-
-#: inc/customizer.php:139
-msgid "Color Scheme"
-msgstr "Esquema de cores"
-
-#: inc/customizer.php:142
-msgid "Light"
-msgstr "Claro"
-
-#: inc/customizer.php:142
-msgid "Dark"
-msgstr "Escuro"
-
-#: inc/customizer.php:149
-msgid "Footer"
-msgstr "Rodapé"
-
-#: inc/customizer.php:160
-msgid "Footer Text"
-msgstr "Texto do rodapé"
-
-#: inc/extras.php:68
-msgid "Page %s"
-msgstr "Página %s"
-
-#: inc/template-tags.php:34
-msgid "Post navigation"
-msgstr "Navegação de posts"
-
-#: inc/template-tags.php:38
-msgctxt "Previous post link"
-msgid "&larr;"
-msgstr "&larr;"
-
-#: inc/template-tags.php:39
-msgctxt "Next post link"
-msgid "&rarr;"
-msgstr "&rarr;"
-
-#: inc/template-tags.php:44
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> Posts antigos"
-
-#: inc/template-tags.php:48
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Posts recentes <span class=\"meta-nav\">&rarr;</span>"
-
-#: inc/template-tags.php:71
-msgid "Pingback:"
-msgstr "Pingback:"
-
-#: inc/template-tags.php:81
-msgid "%s <span class=\"says\">says:</span>"
-msgstr "%s <span class=\"says\">disse:</span>"
-
-#: inc/template-tags.php:87
-msgctxt "1: date, 2: time"
-msgid "%1$s at %2$s"
-msgstr "%1$s às %2$s"
-
-#: inc/template-tags.php:94
-msgid "Your comment is awaiting moderation."
-msgstr "Seu comentário está aguardando para ser moderado."
-
-#: inc/template-tags.php:185
-msgid "<span class=\"posted-on\">Posted on %s</span>"
-msgstr "<span class=\"posted-on\">Publicado em %s</span>"
-
-#: no-results.php:13
-msgid "Nothing Found"
-msgstr "Nada encontrado"
-
-#: no-results.php:19
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Pronto para fazer sua primeira publicação? <a href=\"%1$s\">Comece aqui</a>."
-
-#: no-results.php:23
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr "Desculpe, mas não encontramos nada. Por favor, tente de novo usando outras palavras."
-
-#: no-results.php:28
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr "Parece que não encontramos o que você estava procurando. Que tal fazer uma pesquisa?"
-
-#: search.php:16
-msgid "Search Results for: %s"
-msgstr "Resultados da pesquisa por: %s"
-
-#: searchform.php:10
-msgctxt "label"
-msgid "Search for:"
-msgstr "Pesquise por:"
-
-#: searchform.php:11
-msgctxt "placeholder"
-msgid "Type your search and press enter"
-msgstr "Digite sua pesquisa e aperte enter"
-
-#: searchform.php:13
-msgctxt "submit button"
-msgid "Search"
-msgstr "Pesquisar"
-
-#: sidebar.php:27
-msgid "Meta"
-msgstr "Meta"
-
-msgid "Kaingang"
-msgstr "Kaingang"
-
-msgid "http://kaingang.redelivre.org.br"
-msgstr "http://kaingang.redelivre.org.br"
-
-msgid "Description"
-msgstr "Descrição"
-
-msgid "Rede Livre"
-msgstr "Rede Livre"
-
-msgid "http://redelivre.org.br"
-msgstr "http://redelivre.org.br"
-
-#: 404.php:15
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:15
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Ops, a página não foi encontrada!"
 
-#: 404.php:19
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
-msgstr "Aparentemente, nada foi encontrado aqui. Que tal tentar algum dos links abaixo ou, quem sabe, fazer uma pesquisa?"
+#: ../404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Aparentemente, nada foi encontrado aqui. Que tal tentar algum dos links "
+"abaixo ou, quem sabe, fazer uma pesquisa?"
 
-#: 404.php:27
+#: ../404.php:27
 msgid "Most Used Categories"
 msgstr "Categorias mais usadas"
 
-#: 404.php:44
+#: ../404.php:44
+#, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Tente procurar nos arquivos mensais: %1$s"
 
-#: archive.php:31
+#: ../archive.php:31
+#, php-format
 msgid "Author: %s"
 msgstr "Autor: %s"
 
-#: archive.php:39
+#: ../archive.php:39
+#, php-format
 msgid "Day: %s"
 msgstr "Dia: %s"
 
-#: archive.php:42
+#: ../archive.php:42
+#, php-format
 msgid "Month: %s"
 msgstr "Mês: %s"
 
-#: archive.php:45
+#: ../archive.php:45
+#, php-format
 msgid "Year: %s"
 msgstr "Ano: %s"
 
-#: archive.php:48
+#: ../archive.php:48
 msgid "Asides"
 msgstr "Notas"
 
-#: archive.php:51
+#: ../archive.php:51
 msgid "Images"
 msgstr "Imagens"
 
-#: archive.php:54
+#: ../archive.php:54
 msgid "Videos"
 msgstr "Vídeos"
 
-#: archive.php:57
+#: ../archive.php:57
 msgid "Quotes"
 msgstr "Citações"
 
-#: archive.php:60
+#: ../archive.php:60
 msgid "Links"
 msgstr "Links"
 
-#: archive.php:63
-#: sidebar.php:20
+#: ../archive.php:63 ../sidebar.php:20
 msgid "Archives"
 msgstr "Arquivos"
 
-#: comments.php:29
+#: ../comments.php:29
+#, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Um comentário sobre \"%2$s\""
 msgstr[1] "%1$s comentários sobre \"%2$s\""
 
-#: comments.php:36
-#: comments.php:56
+#: ../comments.php:36 ../comments.php:56
 msgid "Comment navigation"
 msgstr "Navegação dos comentários"
 
-#: comments.php:37
-#: comments.php:57
+#: ../comments.php:37 ../comments.php:57
 msgid "&larr; Older Comments"
 msgstr "&larr; Comentários antigos"
 
-#: comments.php:38
-#: comments.php:58
+#: ../comments.php:38 ../comments.php:58
 msgid "Newer Comments &rarr;"
 msgstr "Comentários recentes &rarr;"
 
-#: comments.php:68
+#: ../comments.php:68
 msgid "Comments are closed."
 msgstr "Os comentários estão fechados."
 
-#: image.php:58
-#: page.php:36
-#: single-agenda.php:63
-#: single.php:34
+#: ../footer.php:32 ../inc/customizer.php:193
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Orgulhosamente criado com %s"
+
+#: ../functions.php:60
+msgid "Primary Menu"
+msgstr "Menu primário"
+
+#: ../functions.php:84
+msgid "Home Sidebar"
+msgstr "Barra lateral da capa"
+
+#: ../functions.php:86
+msgid "The main sidebar, displayed on the front page"
+msgstr "A barra lateral principal, exibida na capa do site"
+
+#: ../functions.php:94
+msgid "Internal Sidebar"
+msgstr "Barra lateral interna"
+
+#: ../functions.php:96
+msgid "The secondary sidebar, displayed internally"
+msgstr "A barra lateral secundária, exibida nas páginas internas"
+
+#: ../functions.php:104
+msgid "Footer Widget Area"
+msgstr "Área de widgets do rodapé"
+
+#: ../functions.php:106
+msgid "Appears on your footer"
+msgstr "É exibida no rodapé do site"
+
+#: ../header.php:76
+msgid "Find us"
+msgstr "Encontre-nos"
+
+#: ../header.php:92
+msgid "Search for:"
+msgstr "Pesquise por:"
+
+#: ../home.php:34 ../inc/customizer.php:102
+msgid "Events"
+msgstr "Agenda"
+
+#: ../image.php:22
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s &times; %5$s</a> in <a "
+"href=\"%6$s\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+"Publicado em <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s &times; %5$s</a> em <a "
+"href=\"%6$s\" rel=\"gallery\">%7$s</a>"
+
+#: ../image.php:32 ../image.php:64 ../inc/template-tags.php:71
+#: ../inc/template-tags.php:90 ../page.php:23 ../single-agenda.php:18
+#: ../single.php:21 ../tpl-contato.php:28
+msgid "Edit"
+msgstr "Editar"
+
+#: ../image.php:37
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr "<span class=\"meta-nav\">&larr;</span> Anterior"
+
+#: ../image.php:38
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Próximo <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../image.php:58 ../page.php:36 ../single-agenda.php:63 ../single.php:34
+#: ../tpl-contato.php:27
 msgid "Pages:"
 msgstr "Páginas:"
 
-#: single.php:43
-#: single.php:46
+#: ../inc/customizer.php:75
+msgid "Display header text"
+msgstr "Exibir texto do cabeçalho"
+
+#: ../inc/customizer.php:83
+msgid "Branding"
+msgstr "Marca"
+
+#: ../inc/customizer.php:94
+msgid "Logo"
+msgstr "Logo"
+
+#: ../inc/customizer.php:113
+msgid "Display events list on Home"
+msgstr "Exibir agenda na capa"
+
+#: ../inc/customizer.php:128
+msgid "Link Color"
+msgstr "Cor dos links"
+
+#: ../inc/customizer.php:140
+msgid "Color Scheme"
+msgstr "Esquema de cores"
+
+#: ../inc/customizer.php:143
+msgid "Light"
+msgstr "Claro"
+
+#: ../inc/customizer.php:143
+msgid "Dark"
+msgstr "Escuro"
+
+#: ../inc/customizer.php:150
+msgid "Destaque"
+msgstr "Destaque"
+
+#: ../inc/customizer.php:159
+msgid "Proporção da foto"
+msgstr "Proporção da foto"
+
+#: ../inc/customizer.php:163
+msgid "Padrão"
+msgstr "Padrão"
+
+#: ../inc/customizer.php:164
+msgid "3:2"
+msgstr "3:2"
+
+#: ../inc/customizer.php:165
+msgid "4:3"
+msgstr "4:3"
+
+#: ../inc/customizer.php:166
+msgid "16:9"
+msgstr "16:9"
+
+#: ../inc/customizer.php:174
+msgid "Footer"
+msgstr "Rodapé"
+
+#: ../inc/customizer.php:186
+msgid "Footer Text"
+msgstr "Texto do rodapé"
+
+#: ../inc/customizer.php:199
+msgid "Footer Credits Text"
+msgstr "Texto dos Créditos no Rodapé"
+
+#: ../inc/customizer.php:212
+msgid "Footer Credits Link"
+msgstr "Link dos Créditos no Rodapé"
+
+#: ../inc/customizer.php:227
+msgid "Cabeçalho"
+msgstr "Cabeçalho"
+
+#: ../inc/customizer.php:237
+msgid "Cor de fundo"
+msgstr "Cor de fundo"
+
+#: ../inc/customizer.php:248
+msgid "Imagem de fundo"
+msgstr "Imagem de fundo"
+
+#: ../inc/customizer.php:259
+msgid "Estrutura"
+msgstr "Estrutura"
+
+#: ../inc/customizer.php:271
+msgid "Typography (beta)"
+msgstr "Tipografia (beta)"
+
+#: ../inc/customizer.php:280
+msgid "Main Font"
+msgstr "Fonte Principal"
+
+#: ../inc/customizer.php:284
+msgid "Default"
+msgstr "Padrão"
+
+#: ../inc/customizer.php:285
+msgid "Amaranth"
+msgstr "Amaranth"
+
+#: ../inc/customizer.php:286
+msgid "Arvo"
+msgstr "Arvo"
+
+#: ../inc/customizer.php:287
+msgid "Lato"
+msgstr "Lato"
+
+#: ../inc/customizer.php:288
+msgid "Noticia Text"
+msgstr "Texto da notícia"
+
+#: ../inc/customizer.php:289
+msgid "Special Elite"
+msgstr "Special Elite"
+
+#: ../inc/customizer.php:297
+msgid "Comentários via Facebook"
+msgstr "Comentários via Facebook"
+
+#: ../inc/customizer.php:305
+msgid "Exibe a caixa de comentários do Facebook"
+msgstr "Exibe a caixa de comentários do Facebook"
+
+#: ../inc/customizer.php:317
+msgid "Exibe icones das redes sociais internos do Kaingang"
+msgstr "Exibe icones das redes sociais internos do Kaingang"
+
+#: ../inc/customizer.php:329
+msgid "Exibe área de busca no cabeçalho"
+msgstr "Exibe área de busca no cabeçalho"
+
+#: ../inc/customizer.php:489
+msgid "Customize"
+msgstr "Personalizar"
+
+#: ../inc/extras.php:68
+#, php-format
+msgid "Page %s"
+msgstr "Página %s"
+
+#: ../inc/template-tags.php:34
+msgid "Post navigation"
+msgstr "Navegação de posts"
+
+#: ../inc/template-tags.php:38
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: ../inc/template-tags.php:39
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: ../inc/template-tags.php:44
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Posts antigos"
+
+#: ../inc/template-tags.php:48
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Posts recentes <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/template-tags.php:71
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: ../inc/template-tags.php:81
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">disse:</span>"
+
+#: ../inc/template-tags.php:87
+#, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s às %2$s"
+
+#: ../inc/template-tags.php:94
+msgid "Your comment is awaiting moderation."
+msgstr "Seu comentário está aguardando para ser moderado."
+
+#: ../inc/template-tags.php:188
+#, php-format
+msgid "View all posts in %s"
+msgstr "Ver todos os postes para %s"
+
+#: ../inc/template-tags.php:270
+msgid "Share"
+msgstr "Compartilhe"
+
+#: ../inc/template-tags.php:271
+msgid "Share on Twitter"
+msgstr "Compartilhe no Twitter"
+
+#: ../inc/template-tags.php:272
+msgid "Share on Facebook"
+msgstr "Compartilhe no Facebook"
+
+#: ../inc/template-tags.php:273
+msgid "Share on Google+"
+msgstr "Compartilhe no Google+"
+
+#: ../inc/template-tags.php:277
+msgid "Link"
+msgstr "Link"
+
+#: ../inc/template-tags.php:277
+msgid "Click to copy the permalink"
+msgstr "Clique para copiar o permalink"
+
+#: ../layouts/header-1.php:21 ../layouts/header-2.php:14
+msgid "Menu"
+msgstr "Menu"
+
+#: ../layouts/header-1.php:22 ../layouts/header-2.php:15
+msgid "Skip to content"
+msgstr "Pular para o conteúdo"
+
+#: ../no-results.php:13
+msgid "Nothing Found"
+msgstr "Nada encontrado"
+
+#: ../no-results.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Pronto para fazer sua primeira publicação? <a href=\"%1$s\">Comece aqui</a>."
+
+#: ../no-results.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Desculpe, mas não encontramos nada. Por favor, tente de novo usando outras "
+"palavras."
+
+#: ../no-results.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Parece que não encontramos o que você estava procurando. Que tal fazer uma "
+"pesquisa?"
+
+#: ../search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados da pesquisa por: %s"
+
+#: ../searchform.php:10
+msgctxt "label"
+msgid "Search for:"
+msgstr "Pesquise por:"
+
+#: ../searchform.php:11
+msgctxt "placeholder"
+msgid "Type your search and press enter"
+msgstr "Digite sua pesquisa e aperte enter"
+
+#: ../searchform.php:13
+msgctxt "submit button"
+msgid "Search"
+msgstr "Pesquisar"
+
+#: ../sidebar.php:27
+msgid "Meta"
+msgstr "Meta"
+
+#: ../single-agenda.php:31
+msgctxt "Agenda"
+msgid "Date"
+msgstr "Data"
+
+#: ../single-agenda.php:49
+msgctxt "Agenda"
+msgid "Time"
+msgstr "Horário"
+
+#: ../single-agenda.php:53
+msgctxt "Agenda"
+msgid "Location"
+msgstr "Local"
+
+#: ../single-agenda.php:57
+msgctxt "Agenda"
+msgid "More info"
+msgstr "Mais informações"
+
+#: ../single.php:43 ../single.php:46
 msgid ", "
 msgstr ", "
 
-#: single.php:50
+#: ../single.php:50
 msgid "Tags"
 msgstr "Palavras-chave"
 
+#: ../single.php:57
+msgid "Categories"
+msgstr "Categorias"
+
+#: ../tpl-contato.php:14
+msgid "Contact Us"
+msgstr "Entre em contato"
+
+#~ msgid "<span class=\"posted-on\">Posted on %s</span>"
+#~ msgstr "<span class=\"posted-on\">Publicado em %s</span>"
+
+#~ msgid "Kaingang"
+#~ msgstr "Kaingang"
+
+#~ msgid "http://kaingang.redelivre.org.br"
+#~ msgstr "http://kaingang.redelivre.org.br"
+
+#~ msgid "Description"
+#~ msgstr "Descrição"
+
+#~ msgid "Rede Livre"
+#~ msgstr "Rede Livre"
+
+#~ msgid "http://redelivre.org.br"
+#~ msgstr "http://redelivre.org.br"

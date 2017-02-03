@@ -187,6 +187,32 @@ function kaingang_customize_register( $wp_customize ) {
 		'section'  => 'kaingang_footer',
 		'settings' => 'kaingang_footer_text'
 	) );
+    
+    // Footer section: footer credits text
+    $wp_customize->add_setting( 'kaingang_footer_credits_text', array(
+    	'default'    	=> sprintf( __( 'Proudly powered by %s', 'kaingang' ), 'WordPress' ),
+    	'capability'  	=> 'edit_theme_options',
+    	'transport' 	=> 'postMessage'
+    ) );
+    
+    $wp_customize->add_control( 'kaingang_footer_credits_text', array(
+    	'label'    => __( 'Footer Credits Text', 'kaingang' ),
+    	'section'  => 'kaingang_footer',
+    	'settings' => 'kaingang_footer_credits_text'
+    ) );
+    
+    // Footer section: footer credits link
+    $wp_customize->add_setting( 'kaingang_footer_credits_link', array(
+    	'default'    	=> "http://wordpress.org/",
+    	'capability'  	=> 'edit_theme_options',
+    	'transport' 	=> 'postMessage'
+    ) );
+    
+    $wp_customize->add_control( 'kaingang_footer_credits_link', array(
+    	'label'    => __( 'Footer Credits Link', 'kaingang' ),
+    	'section'  => 'kaingang_footer',
+    	'settings' => 'kaingang_footer_credits_link'
+    ) );
 
 	// Add postMessage support for site title and description for the Theme Customizer.
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
