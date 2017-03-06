@@ -6,7 +6,7 @@
 ( function() {
 	var container, button, menu;
 
-	container = document.getElementById( 'site-navigation' );
+	container = jQuery('.main-navigation').first().get(0);
 	if ( ! container )
 		return;
 
