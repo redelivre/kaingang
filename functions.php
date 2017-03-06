@@ -238,10 +238,13 @@ function kaingang_fb_comments_box() {
 	
 	<script>
 		var siteLeadUrl = "<?php echo get_template_directory_uri() . "/js/site-lead.js" ?>";
-		Modernizr.load({
-	        test: Modernizr.mq("only screen and (min-width:64.063em)"),
-	        yep: siteLeadUrl
-		});
+		if(typeof Modernizr !== 'undefined')
+		{
+			Modernizr.load({
+		        test: Modernizr.mq("only screen and (min-width:64.063em)"),
+		        yep: siteLeadUrl
+			});
+		}
 	</script>
 
 	<?php
