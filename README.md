@@ -6,6 +6,10 @@ O tema de festivais para a Rede Livre, que conta com algumas funcionalidades:
 * Inversão da cor predominante, sendo possível mudar entre *claro* e *escuro*
 * Escolha de cor ou imagem para o fundo do site
 
+[![Join the chat at https://telegram.me/IdentidadeDigital](https://patrolavia.github.io/telegram-badge/chat.png)](https://t.me/RedeLivreOrg)
+
+# captura
+![Screenshot](./screenshot.png)
 
 ## Como contribuir
 Há, basicamente, três formas:
